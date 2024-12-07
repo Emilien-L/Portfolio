@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--=============== FONT AWESOME ===============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <title>Portfolio | Emilien Lecompte</title>
+  </head>
+  <body>
+    <!--==================== STYLE SWITCHER ====================-->
+    <div class="style__switcher"></div>
+
+    <!--==================== HEADER ====================-->
+    <header class="header">
+      <nav class="nav container">
+        <a href="index.html" class="nav__logo">Emilien</a>
+
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#home" class="nav__link active-link">Accueil</a>
+          </li>
+
+          <li class="nav__item">
+            <a href="#about" class="nav__link">A propos</a>
+          </li>
+
+          <li class="nav__item">
+            <a href="#qualification" class="nav__link">Experience</a>
+          </li>
+
+          <li class="nav__item">
+            <a href="#services" class="nav__link">Veille Technologique</a>
+          </li>
+
+          <li class="nav__item">
+            <a href="#works" class="nav__link">Projets</a>
+          </li>
+
+          <li class="nav__item">
+            <a href="#contact" class="nav__link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!--==================== MAIN ====================-->
+    <main class="main">
+      <!--==================== HOME ====================-->
+      <section class="home" id="home">
+        <div class="home__container container grid">
+          <div class="home__content">
+            <span class="home__small">Bonjour</span> <br />
+            <hi class="home__title">
+              <span>Je suis</span> Emilien <br />
+              un <span>étudiant en developpement</span>
+            </hi>
+
+            <p class="home__description">
+              Passionné par le développement web et mobile, je suis toujours à la recherche  
+              de nouveaux défis pour concevoir des solutions modernes et adaptées aux besoins  
+              des utilisateurs. Découvrez mon univers et mes projets !
+            </p>
+
+            <div class="home__btns">
+              <a href="#contact" class="btn">Contactez-moi</a>
+              <a href="#portfolio" class="btn btn--transparent">Portfolio</a>
+            </div>
+          </div>
+          
+          <div class="home__img-wrapper">
+            <img src="assets/img/profile.png" alt="" class="home__img">
+          </div>
+        </div>
+      </section>
+
+      <!--==================== ABOUT ====================-->
+      <section class="about section" id="about">
+        <div class="about__container container grid">
+          <div class="about__img-wrapper">
+            <img src="assets/img/about.png" alt="" class="about__img">
+            <img src="assets/img/about.png" alt="" class="about__img">
+            <img src="assets/img/about.png" alt="" class="about__img">
+            <img src="assets/img/about.png" alt="" class="about__img">
+          </div>
+
+          <div class="about__content">
+            <h2 class="section__title" data-title="Qui suis-je?">
+              Je suis Emilien un étudiant en BTS SIO
+            </h2>
+
+            <p class="about__description">
+              Je suis développeur passionné, actuellement en BTS SIO, spécialité SLAM.  
+              J’ai acquis des compétences solides dans le développement d’applications web et mobiles,  
+              en particulier avec des technologies comme PHP, Symfony, Java et Flutter.  
+
+              Ma curiosité et mon envie de toujours apprendre me poussent à explorer de nouvelles  
+              solutions techniques, tout en mettant un point d'honneur à produire un code propre,  
+              maintenable et performant.  
+
+              Mon objectif est de créer des applications innovantes qui répondent aux besoins  
+              des utilisateurs de manière efficace et intuitive.
+
+            </p>
+
+            <ul class="about__data grid">
+              <li class="data__item">
+                <h3 class="data__title">Prénom:</h3>
+                <span class="data__description">Emilien Lecompte</span>
+              </li>
+
+              <li class="data__item">
+                <h3 class="data__title">Age:</h3>
+                <span class="data__description">21 ans</span>
+              </li>
+
+              <li class="data__item">
+                <h3 class="data__title">De:</h3>
+                <span class="data__description">Limoges</span>
+              </li>
+
+              <li class="data__item">
+                <h3 class="data__title">Email:</h3>
+                <span class="data__description about__link">emilienlecompte@gmail.com</span>
+              </li>
+            </ul>
+
+            <div class="about__bottom">
+              <a href="" class="btn">Télécharger mon CV</a>
+
+              <div class="about__social-links">
+                <a href="https://www.linkedin.com/in/emilien-lecompte-b5111029a/" class="about__social-link">
+                  <i class="fa-brands fa-linkedin"></i>                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--==================== QUALIFICATION ====================-->
+      <section class="qualification section" id="qualification">
+        <h2 class="section__title title-center" data-title="Mon parcours">
+          Qualification
+        </h2>
+
+        <div class="resume__container container grid">
+          <div class="resume__group">
+            <h3 class="resume__heading">Scolarité</h3>
+
+            <div class="resume__items">
+              <div class="resume__item">
+                <div class="resume__header">
+                  <h3 class="resume__subtitle">BTS SIO Spécialité SLAM</h3>
+                  <span class="resume__icon">+</span>
+                </div>
+
+                <div class="resume__content">
+                  <div class="resume__date-title">
+                    <h3 class="resume__title">Lycée Suzanne Valadon</h3>
+                    <span class="resume__date">2023 - 2025</span>
+                  </div>
+
+                  <p class="resume__description">
+                    Formation spécialisée dans le développement d'applications web et mobiles, avec une approche  
+                    axée sur la conception, la programmation et la gestion de projets. Acquisition de compétences  
+                    en PHP, Symfony, Flutter, Python, SQL, C#, HTML/CSS et Java.
+                </div>
+              </div>
+
+              <div class="resume__item">
+                <div class="resume__header">
+                  <h3 class="resume__subtitle">IUT Informatique</h3>
+                  <span class="resume__icon">-</span>
+                </div>
+
+                <div class="resume__content">
+                  <div class="resume__date-title">
+                    <h3 class="resume__title">IUT du Limousin</h3>
+                    <span class="resume__date">2022 - 2023</span>
+                  </div>
+
+                  <p class="resume__description">
+                    Approfondissement des bases en informatique, notamment en algorithmique, programmation  
+                    et systèmes d'exploitation. Initiation à des technologies modernes et au travail en équipe  
+                    sur des projets concrets.
+                </div>
+              </div>
+
+              <div class="resume__item">
+                <div class="resume__header">
+                  <h3 class="resume__subtitle">Autre truc crazy de fou</h3>
+                  <span class="resume__icon">+</span>
+                </div>
+
+                <div class="resume__content">
+                  <div class="resume__date-title">
+                    <h3 class="resume__title">Lorem ipsum folie</h3>
+                    <span class="resume__date">2014 - 2016</span>
+                  </div>
+
+                  <p class="resume__description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Proin at magna sed risus euismod maximus id vel augue.
+                    Integer interdum nulla ut tortor pretium, dapibus aliquam mauris porttitor.
+                    Phasellus volutpat.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="resume__group">
+            <h3 class="resume__heading">Experience</h3>
+
+            <div class="resume__items">
+              <div class="resume__item">
+                <div class="resume__header">
+                  <h3 class="resume__subtitle">Mairie glandon psartek</h3>
+                  <span class="resume__icon">+</span>
+                </div>
+
+                <div class="resume__content">
+                  <div class="resume__date-title">
+                    <h3 class="resume__title">Wordpress de zinzin</h3>
+                    <span class="resume__date">2014 - 2016</span>
+                  </div>
+
+                  <p class="resume__description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Proin at magna sed risus euismod maximus id vel augue.
+                    Integer interdum nulla ut tortor pretium, dapibus aliquam mauris porttitor.
+                    Phasellus volutpat.
+                </div>
+              </div>
+
+              <div class="resume__item">
+                <div class="resume__header">
+                  <h3 class="resume__subtitle">Blabla trop cool</h3>
+                  <span class="resume__icon">-</span>
+                </div>
+
+                <div class="resume__content">
+                  <div class="resume__date-title">
+                    <h3 class="resume__title">Dev trop crazy</h3>
+                    <span class="resume__date">2016 - 2018</span>
+                  </div>
+
+                  <p class="resume__description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Proin at magna sed risus euismod maximus id vel augue.
+                    Integer interdum nulla ut tortor pretium, dapibus aliquam mauris porttitor.
+                    Phasellus volutpat.
+                </div>
+              </div>
+
+              <div class="resume__item">
+                <div class="resume__header">
+                  <h3 class="resume__subtitle">Autre truc crazy de fou</h3>
+                  <span class="resume__icon">+</span>
+                </div>
+
+                <div class="resume__content">
+                  <div class="resume__date-title">
+                    <h3 class="resume__title">Lorem ipsum folie</h3>
+                    <span class="resume__date">2014 - 2016</span>
+                  </div>
+
+                  <p class="resume__description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Proin at magna sed risus euismod maximus id vel augue.
+                    Integer interdum nulla ut tortor pretium, dapibus aliquam mauris porttitor.
+                    Phasellus volutpat.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--==================== Veille ====================-->
+      <section class="services section" id="services">
+        <h2 class="section__title title-center" data-title="Veille">
+          Ma veille technologique
+        </h2>
+
+        <div class="services__container container grid">
+          <div class="services__item">
+            <i class="fa-solid fa-pen-to-square services__icon"></i>
+
+            <h3 class="services__title">UI/UX Design</h3>
+            <p class="services__description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Proin at magna sed risus euismod
+
+              <span class="services__no">01</span>
+            </p>
+          </div>
+
+          <div class="services__item">
+            <i class="fa-solid fa-laptop services__icon"></i>
+
+            <h3 class="services__title">Web Design</h3>
+            <p class="services__description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Proin at magna sed risus euismod
+
+              <span class="services__no">02</span>
+            </p>
+          </div>
+
+          <div class="services__item">
+            <i class="fa-solid fa-chart-area services__icon"></i>
+
+            <h3 class="services__title">Lorem ipsum</h3>
+            <p class="services__description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Proin at magna sed risus euismod
+
+              <span class="services__no">03</span>
+            </p>
+          </div>
+
+          <div class="services__item">
+            <i class="fa-solid fa-pen-to-square services__icon"></i>
+
+            <h3 class="services__title">UI/UX Design</h3>
+            <p class="services__description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Proin at magna sed risus euismod
+
+              <span class="services__no">04</span>
+            </p>
+          </div>
+
+          <div class="services__item">
+            <i class="fa-solid fa-laptop services__icon"></i>
+
+            <h3 class="services__title">Web Design</h3>
+            <p class="services__description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Proin at magna sed risus euismod
+
+              <span class="services__no">05</span>
+            </p>
+          </div>
+
+          <div class="services__item">
+            <i class="fa-solid fa-chart-area services__icon"></i>
+
+            <h3 class="services__title">Lorem ipsum</h3>
+            <p class="services__description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Proin at magna sed risus euismod
+
+              <span class="services__no">06</span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!--==================== SKILLS ====================-->
+      <section class="skills section">
+       <h2 class="section__title title-center" data-title="Mes compétences">
+        Mes compétences
+       </h2>
+       
+       <div class="skills__container container grid">
+        <div class="skills__item">
+          <div class="skills__titles">
+            <h3 class="skills__name">PHP</h3>
+            <span class="skills__no">85 %</span>
+          </div>
+
+          <p class="skills__description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
+
+          <div class="skills__bar">
+            <div class="skills__percentage" style="width: 85%">
+              <span></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills__item">
+          <div class="skills__titles">
+            <h3 class="skills__name">JavaScript</h3>
+            <span class="skills__no">50 %</span>
+          </div>
+
+          <p class="skills__description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
+
+          <div class="skills__bar">
+            <div class="skills__percentage" style="width: 55%">
+              <span></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills__item">
+          <div class="skills__titles">
+            <h3 class="skills__name">WordPress</h3>
+            <span class="skills__no">85 %</span>
+          </div>
+
+          <p class="skills__description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
+
+          <div class="skills__bar">
+            <div class="skills__percentage" style="width: 90%">
+              <span></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills__item">
+          <div class="skills__titles">
+            <h3 class="skills__name">PHP</h3>
+            <span class="skills__no">85 %</span>
+          </div>
+
+          <p class="skills__description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
+
+          <div class="skills__bar">
+            <div class="skills__percentage" style="width: 85%">
+              <span></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills__item">
+          <div class="skills__titles">
+            <h3 class="skills__name">JavaScript</h3>
+            <span class="skills__no">50 %</span>
+          </div>
+
+          <p class="skills__description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
+
+          <div class="skills__bar">
+            <div class="skills__percentage" style="width: 55%">
+              <span></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills__item">
+          <div class="skills__titles">
+            <h3 class="skills__name">WordPress</h3>
+            <span class="skills__no">85 %</span>
+          </div>
+
+          <p class="skills__description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
+
+          <div class="skills__bar">
+            <div class="skills__percentage" style="width: 90%">
+              <span></span>
+            </div>
+          </div>
+        </div>      
+       </div>
+      </section>
+
+      <!--==================== PORTFOLIO ====================-->
+      <section class="works section" id="works">
+        <h2 class="section__title title-center" data-title="My PortFolio">
+          Recent Works
+        </h2>
+
+        <div class="work__container container grid">
+          <div class="work__card">
+            <img src="assets/img/project-img-1.jpg" alt="" class="work__img">
+
+            <div class="work__details">
+              <h3 class="work__title">Ad</h3>
+                <span class="work__description">This is a short description                
+                </span>
+            </div>
+          </div>
+
+          <div class="work__card">
+            <img src="assets/img/project-img-2.jpg" alt="" class="work__img">
+
+            <div class="work__details">
+              <h3 class="work__title">Ad pute</h3>
+                <span class="work__description">This is a short description                
+                </span>
+            </div>
+          </div>
+
+          <div class="work__card">
+            <img src="assets/img/project-img-3.jpg" alt="" class="work__img">
+
+            <div class="work__details">
+              <h3 class="work__title">Ad salope</h3>
+                <span class="work__description">This is a short description                
+                </span>
+            </div>
+          </div>
+
+          <div class="work__card">
+            <img src="assets/img/project-img-4.jpg" alt="" class="work__img">
+
+            <div class="work__details">
+              <h3 class="work__title">Ad chienne</h3>
+                <span class="work__description">This is a short description                
+                </span>
+            </div>
+          </div>
+
+          <div class="work__card">
+            <img src="assets/img/project-img-5.jpg" alt="" class="work__img">
+
+            <div class="work__details">
+              <h3 class="work__title">Ad enculé</h3>
+                <span class="work__description">This is a short description                
+                </span>
+            </div>
+          </div>
+
+          <div class="work__card">
+            <img src="assets/img/project-img-6.jpg" alt="" class="work__img">
+
+            <div class="work__details">
+              <h3 class="work__title">Ad connard</h3>
+                <span class="work__description">This is a short description                
+                </span>
+            </div>
+          </div>       
+        </div>
+      </section>
+
+      <!--==================== TESTIMONIALS ====================-->
+      <section class="testimonials">
+      </section>
+
+      <!--==================== CONTACT ====================-->
+      <section class="contact section" id="contact">
+        <h2 class="section__title title-center" data-title="Prendre contact">
+          Me contacter
+        </h2>
+
+        <div class="contact__container container grid">
+          <div class="contact__details">
+            <div class="contact__item">
+              <i class="fa-solid fa-envelope contact__icon"></i>
+
+              <div>
+                <h3 class="contact__title">Email</h3>
+                <span class="contact__data">emilienlecompte@gmail.com</span>
+              </div>
+            </div>
+
+            <div class="contact__item">
+              <i class="fa-solid fa-location-dot contact__icon"></i>
+
+              <div>
+                <h3 class="contact__title">Adresse</h3>
+                <span class="contact__data">Limoges</span>
+              </div>
+            </div>
+          </div>
+
+          <form action="" class="contact__form">
+            <div class="form__group">
+              <div class="form__input">
+                <input type="text" placeholder="Nom" class="input__control">
+              </div>
+
+              <div class="form__input">
+                <input type="email" placeholder="Email" class="input__control">
+              </div>
+            </div>
+
+            <div class="form__input">
+              <input type="text" placeholder="Sujet" class="input__control">
+            </div>
+
+            <div class="form__input">
+              <textarea name="" id="" placeholder="Message" cols="30" rows="10" class="input__control textarea"></textarea>
+            </div>
+            <button class="btn contact__btn">Envoyer un message</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer">
+      <div class="footer__container container">
+        <p class="footer__copyright">&copy; 2024 Emilien.
+          Tous Droits Réservés</p>
+
+          <div class="footer__social-links">
+            <a href="" class="footer__social-link">
+              <i class="fa-brands fa-linkedin"></i>                </a>
+          </div>
+      </div>
+    </footer>
+  </body>
+</html>
