@@ -381,8 +381,8 @@ img {
 .about__social-link:hover {
   color: var(--first-color);
 }
-/*=============== QUALIFICATION ===============*/
-.qualification {
+/*=============== parcours ===============*/
+.parcours {
   background-color: var(--container-color);
 }
 
@@ -456,12 +456,12 @@ img {
 .resume__description {
   margin-block: 1.25rem 2rem;
 }
-/*=============== SERVICES ===============*/
-.services__container {
+/*=============== veille ===============*/
+.veille__container {
   grid-template-columns: repeat(3, 1fr);
 }
 
-.services__item {
+.veille__item {
   background-color: var(--container-color);
   border: 1px solid var(--container-color);
   padding: 2.5rem 1.8rem;
@@ -470,23 +470,23 @@ img {
   transition: all .5 ease;
 }
 
-/* Services hover */
-.services__item:hover {
+/* veille hover */
+.veille__item:hover {
   background-color: var(--body-color);
   border-color: var(--border-color);
 }
 
-.services__icon {
+.veille__icon {
   color: var(--first-color);
   font-size: 1.8rem;
 }
 
-.services__title {
+.veille__title {
   font-size: var(--h3-font-size);
   margin-block: 1.5rem 1rem;
 }
 
-.services__no {
+.veille__no {
   position: absolute;
   right: 2.5rem;
   top: 1rem;
@@ -717,15 +717,15 @@ img {
     line-height: 1.4em;
   }
 
-  .services__icon {
+  .veille__icon {
     font-size: 1.5rem;
   }
 
-  .services__no {
+  .veille__no {
     font-size: 2.5rem;
   }
 
-  .services__title {
+  .veille__title {
     margin-block: 1.25rem .75rem;
   }
 }
