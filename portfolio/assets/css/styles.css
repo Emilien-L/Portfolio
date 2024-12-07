@@ -626,7 +626,7 @@ img {
 }
 
 .modal-content {
-  position: relative; /* Ajouté pour que la croix soit positionnée par rapport à ce conteneur */
+  position: relative;
   background-color: #fff;
   padding: 20px;
   border-radius: 8px;
@@ -636,7 +636,6 @@ img {
   animation: fadeIn 0.3s ease;
 }
 
-/* Animation pour l'ouverture du modal */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -646,24 +645,22 @@ img {
   }
 }
 
-/* Style pour la croix de fermeture */
 .close {
   position: absolute;
-  top: 10px; /* Ajustement de l'espace par rapport au haut du modal */
-  right: 10px; /* Ajustement de l'espace par rapport à la droite du modal */
+  top: 10px; 
+  right: 10px;
   font-size: 30px;
   color: var(--first-color);
   padding: 5px;
   border-radius: 50%;
   cursor: pointer;
-  z-index: 1100; /* Assurer que la croix soit au-dessus du contenu */
+  z-index: 1100; 
   transition: all 0.3s ease;
 }
 
 /* Effet au survol de la croix */
 .close:hover {
-  color: var(--white);
-  background-color: var(--body-color)
+  color: var(--first-color);
 }
 
 #modalTitle {
