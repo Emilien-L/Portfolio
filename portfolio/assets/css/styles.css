@@ -556,8 +556,9 @@ img {
 }
 
 /*=============== PORTFOLIO ===============*/
+/* Définition de la grille des cards */
 .work__container {
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .work__card {
@@ -608,6 +609,91 @@ img {
 
 .work__card:hover :is(.work__title, .work__description) {
   transform: translateY(0);
+}
+
+/* Style pour le modal */
+.modal {
+  display: none; /* Cacher par défaut */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  position: relative; /* Ajouté pour que la croix soit positionnée par rapport à ce conteneur */
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 800px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease;
+}
+
+/* Animation pour l'ouverture du modal */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Style pour la croix de fermeture */
+.close {
+  position: absolute;
+  top: 10px; /* Ajustement de l'espace par rapport au haut du modal */
+  right: 10px; /* Ajustement de l'espace par rapport à la droite du modal */
+  font-size: 30px;
+  color: var(--first-color);
+  padding: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1100; /* Assurer que la croix soit au-dessus du contenu */
+  transition: all 0.3s ease;
+}
+
+/* Effet au survol de la croix */
+.close:hover {
+  color: var(--white);
+  background-color: var(--body-color)
+}
+
+#modalTitle {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+#modalDescription {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+#modalCode {
+  background-color: #f4f4f4;
+  padding: 10px;
+  border-radius: 4px;
+  font-family: monospace;
+  white-space: pre-wrap; /* Permet aux retours à la ligne d'être respectés */
+  margin-bottom: 1rem;
+}
+
+#modalDocs {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+/* Pour ne pas trop chambouler l'effet sur les cards, tu peux garder ton hover comme ça : */
+.work__card:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
 }
 
 /*=============== TESTIMONIALS ===============*/

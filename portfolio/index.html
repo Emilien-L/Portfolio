@@ -10,11 +10,15 @@
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="assets/css/styles.css" />
 
+    <!--=============== JS ===============-->
+    <script src="js/javascript.js" defer></script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+
+
     <title>Portfolio | Emilien Lecompte</title>
   </head>
   <body>
-    <!--==================== STYLE SWITCHER ====================-->
-    <div class="style__switcher"></div>
 
     <!--==================== HEADER ====================-->
     <header class="header">
@@ -135,7 +139,7 @@
             </ul>
 
             <div class="about__bottom">
-              <a href="" class="btn">Télécharger mon CV</a>
+              <a href="assets/pdf/LECOMPTE.pdf" class="btn" download="LECOMPTE.pdf">Télécharger mon CV</a>
 
               <div class="about__social-links">
                 <a href="https://www.linkedin.com/in/emilien-lecompte-b5111029a/" class="about__social-link">
@@ -522,72 +526,72 @@
 
       <!--==================== PORTFOLIO ====================-->
       <section class="works section" id="works">
-        <h2 class="section__title title-center" data-title="My PortFolio">
+        <h2 class="section__title title-center" data-title="My Portfolio">
           Recent Works
         </h2>
-
+      
         <div class="work__container container grid">
-          <div class="work__card">
+          <div class="work__card" data-id="1">
             <img src="assets/img/project-img-1.jpg" alt="" class="work__img">
-
             <div class="work__details">
               <h3 class="work__title">Ad</h3>
-                <span class="work__description">This is a short description                
-                </span>
+              <span class="work__description">This is a short description</span>
             </div>
           </div>
-
-          <div class="work__card">
+      
+          <div class="work__card" data-id="2">
             <img src="assets/img/project-img-2.jpg" alt="" class="work__img">
-
             <div class="work__details">
               <h3 class="work__title">Ad pute</h3>
-                <span class="work__description">This is a short description                
-                </span>
+              <span class="work__description">This is a short description</span>
             </div>
           </div>
-
-          <div class="work__card">
+      
+          <div class="work__card" data-id="3">
             <img src="assets/img/project-img-3.jpg" alt="" class="work__img">
-
             <div class="work__details">
               <h3 class="work__title">Ad salope</h3>
-                <span class="work__description">This is a short description                
-                </span>
+              <span class="work__description">This is a short description</span>
             </div>
           </div>
-
-          <div class="work__card">
+      
+          <div class="work__card" data-id="4">
             <img src="assets/img/project-img-4.jpg" alt="" class="work__img">
-
             <div class="work__details">
               <h3 class="work__title">Ad chienne</h3>
-                <span class="work__description">This is a short description                
-                </span>
+              <span class="work__description">This is a short description</span>
             </div>
           </div>
-
-          <div class="work__card">
+      
+          <div class="work__card" data-id="5">
             <img src="assets/img/project-img-5.jpg" alt="" class="work__img">
-
             <div class="work__details">
               <h3 class="work__title">Ad enculé</h3>
-                <span class="work__description">This is a short description                
-                </span>
+              <span class="work__description">This is a short description</span>
             </div>
           </div>
-
-          <div class="work__card">
+      
+          <div class="work__card" data-id="6">
             <img src="assets/img/project-img-6.jpg" alt="" class="work__img">
-
             <div class="work__details">
               <h3 class="work__title">Ad connard</h3>
-                <span class="work__description">This is a short description                
-                </span>
+              <span class="work__description">This is a short description</span>
             </div>
-          </div>       
+          </div>
         </div>
       </section>
+      
+      <!-- Modal pour afficher les infos supplémentaires -->
+      <div class="modal" id="projectModal">
+        <div class="modal-content">
+          <span class="close" id="closeModal">&times;</span>
+          <h3 id="modalTitle"></h3>
+          <p id="modalDescription"></p>
+          <pre id="modalCode"></pre>
+          <div id="modalDocs"></div>
+        </div>
+      </div>
+      
 
       <!--==================== CONTACT ====================-->
       <section class="contact section" id="contact">
@@ -641,27 +645,6 @@
         </div>
       </section>
       
-      <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-      
-      <script>
-        // Initialiser EmailJS avec ton User ID (remplace par le vrai User ID)
-        emailjs.init("KxAdQnqPCwPCmS0CA");
-      
-        // Lorsque le formulaire est soumis
-        document.getElementById('contact-form').addEventListener('submit', function (event) {
-          event.preventDefault(); // Empêche le rechargement de la page
-      
-          // Envoie le formulaire via EmailJS
-          emailjs.sendForm('service_ec6q7sc', 'template_z0xmkse', this)
-            .then(function(response) {
-              alert('Message envoyé avec succès !');
-              // Tu peux aussi vider le formulaire si nécessaire
-              document.getElementById('contact-form').reset();
-            }, function(error) {
-              alert('Une erreur est survenue. Veuillez réessayer.');
-            });
-        });
-      </script>
     </main>
 
     <!--==================== FOOTER ====================-->
