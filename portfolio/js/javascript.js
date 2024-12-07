@@ -14,13 +14,13 @@ document.addEventListener('DOMContentLoaded', () => {
         // Exemple de données associées à chaque projet
         const projects = {
           1: {
-            title: 'Ad',
-            description: 'This is a short description about the Ad project.',
-            code: 'console.log("Ad Project Code");',
-            docs: '<p>This project uses Symfony and PHP.</p>'
+            title: 'Resto',
+            description: 'A venir',
+            code: 'A venir',
+            docs: '<p>Ce projet est en PHP</p>'
           },
           2: {
-            title: 'Ad pute',
+            title: 'Seminaire',
             description: 'This is a short description about the Ad pute project.',
             code: 'console.log("Ad pute Project Code");',
             docs: '<p>Uses Flutter and Dart for mobile app development.</p>'
