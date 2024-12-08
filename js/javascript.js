@@ -15,27 +15,32 @@ document.addEventListener('DOMContentLoaded', () => {
         1: {
           title: 'Resto',
           description: 'A venir',
-          docs: '<p>Ce projet est en PHP</p>'
+          docs: '<p>Pas encore de doc</p>'
         },
         2: {
           title: 'Seminaire',
-          description: 'Site web développer avec PHP permettant de choisir des conférénces, gérer des utilisateurs, ...',
+          description: 'Site web développé avec PHP permettant de choisir des conférénces, gérer des utilisateurs, ...',
           docs: '<p><a href="assets/pdf/Doc_Seminaire.pdf" target="_blank">Consulter la documentation PDF</a>.</p>'
         },
         3: {
           title: 'Congrès ANALIM',
-          description: 'Site web développer avec PHP permettant de gérer des factures',
+          description: 'Site web développé avec PHP permettant de gérer des factures',
           docs: '<p>Pas encore de doc disponible</p>'
         },
         4: {
           title: 'Jardinier',
-          description: 'Site web développer avec Symfony et PHP.',
+          description: 'Site web développé avec Symfony et PHP.',
           docs: '<p>Pas encore de doc disponible.</p>'
         },
         5: {
           title: 'Bibliothèque numérique',
           description: 'Application mobile réalisé en avec Flutter et Dart sur Android Studio.',
           docs: '<p>Pas encore de doc disponible.</p>'
+        },
+        6: {
+          title: 'Mairie de Glandon',
+          description: 'Mise en place du site avec WordPress, développement de quelques extensions en PHP',
+          docs: '<p><a href="https://mairie-glandon.fr" target="_blank">Consulter le site de la Mairie</a>.</p>'
         }
       };
 

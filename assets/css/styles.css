@@ -663,34 +663,17 @@ img {
   color: var(--first-color);
 }
 
-#modalTitle {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
+.modal__title{
+  color: var(--first-color);
 }
 
-#modalDescription {
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
+.modal__document, h3 {
+  color: var(--first-color);
 }
 
-#modalCode {
-  background-color: #f4f4f4;
-  padding: 10px;
-  border-radius: 4px;
-  font-family: monospace;
-  white-space: pre-wrap; /* Permet aux retours à la ligne d'être respectés */
-  margin-bottom: 1rem;
-}
-
-#modalDocs {
-  font-size: 1.1rem;
-  color: #333;
-}
-
-/* Pour ne pas trop chambouler l'effet sur les cards, tu peux garder ton hover comme ça : */
-.work__card:hover {
-  transform: scale(1.05);
-  transition: transform 0.3s ease;
+.modal__docs, 
+.modal__description {
+  color: var(--body-color);
 }
 
 /*=============== TESTIMONIALS ===============*/
@@ -747,6 +730,7 @@ img {
 
 .contact__btn {
   float: right;
+  cursor: pointer;
 }
 
 /*=============== FOOTER ===============*/

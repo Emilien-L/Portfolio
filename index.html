@@ -140,8 +140,9 @@
               <a href="assets/pdf/LECOMPTE.pdf" class="btn" download="LECOMPTE.pdf">Télécharger mon CV</a>
 
               <div class="about__social-links">
-                <a href="https://www.linkedin.com/in/emilien-lecompte-b5111029a/" class="about__social-link">
-                  <i class="fa-brands fa-linkedin"></i>                </a>
+                <a href="https://www.linkedin.com/in/emilien-lecompte-b5111029a/" target="_blank" class="about__social-link">
+                  <i class="fa-brands fa-linkedin"></i> 
+                </a>
               </div>
             </div>
           </div>
@@ -524,8 +525,8 @@
 
       <!--==================== PORTFOLIO ====================-->
       <section class="works section" id="works">
-        <h2 class="section__title title-center" data-title="My Portfolio">
-          Recent Works
+        <h2 class="section__title title-center" data-title="Mon Portfolio">
+          Mes projets
         </h2>
       
         <div class="work__container container grid">
@@ -568,6 +569,14 @@
               <span class="work__description">Flutter | developpement mobile</span>
             </div>
           </div>
+
+          <div class="work__card" data-id="6">
+            <img src="assets/img/project-img-6.jpg" alt="" class="work__img">
+            <div class="work__details">
+              <h3 class="work__title">Site de la mairie de Glandon</h3>
+              <span class="work__description">Mise en place du site avec le CMS WordPress</span>
+            </div>
+          </div>
         </div>
       </section>
       
@@ -575,10 +584,12 @@
       <div id="projectModal" class="modal">
         <div class="modal-content">
           <span id="closeModal" class="close">&times;</span>
-          <h2 id="modalTitle"></h2>
-          <p id="modalDescription"></p>
-          <h3>Documentation</h3>
-          <div id="modalDocs"></div>
+          <h2 id="modalTitle" class="modal__title"></h2>
+          <p id="modalDescription" class="modal__description"></p>
+          <div class="modal__document document-title">
+            <h3>Documentation</h3>
+          </div>
+          <div id="modalDocs" class="modal__docs"></div>
         </div>
       </div>         
 
