@@ -86,6 +86,10 @@ a {
 img {
   max-width: 100%;
 }
+
+#nav-toggler {
+    display: none;
+}
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container{
   max-width: 1200px;
@@ -159,12 +163,13 @@ img {
 
 .nav__link {
   color: var(--title-color);
-  transition: all .3s ease; 
+  transition: all 0.3s ease; 
 }
 
 .nav__toggle {
   display: none;
 }
+
 /* Active link */
 .active-link,
 .nav__link:hover {
@@ -873,6 +878,10 @@ img {
     overflow: hidden;
     transition: all .3s ease;
   }
+
+  #nav-toggler {
+    display: none;
+}
 
   .nav__toggle {
     display: block;

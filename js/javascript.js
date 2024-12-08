@@ -1,9 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
-  console.log('Document loaded');
 
   // Sélectionner toutes les cards de travail
   const cards = document.querySelectorAll('.work__card');
-  console.log(cards);
 
   // Ajouter un événement au clic pour chaque card
   cards.forEach(card => {
