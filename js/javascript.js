@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     3: {
       title: 'Congrès ANALIM',
       description: 'Site web développé avec PHP permettant de gérer des factures',
-      docs: '<p>Pas encore de doc disponible</p>',
+      docs: '<p><a href="assets/pdf/Doc_Congres.pdf" target="_blank">Consulter la documentation</a></p>',
     },
     4: {
       title: 'Jardinier',
