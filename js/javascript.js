@@ -1,82 +1,86 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const modal = document.getElementById('projectModal');
 
   // Sélectionner toutes les cards de travail
   const cards = document.querySelectorAll('.work__card');
 
+  // Définir les projets
+  const projects = {
+    1: {
+      title: 'Resto',
+      description: 'Le projet Resto est une application web conçue pour faciliter la gestion des restaurants. Les utilisateurs peuvent y consulter une liste de restaurants, voir leurs détails, effectuer des recherches, s\'inscrire et se connecter.',
+      docs: '<p><a href="assets/pdf/Doc_Projet_Resto.pdf" target="_blank">Consulter la documentation</a></p>',
+    },
+    2: {
+      title: 'Seminaire',
+      description: 'Site web développé avec PHP permettant de choisir des conférénces, gérer des utilisateurs, ...',
+      docs: '<p><a href="assets/pdf/Doc_Seminaire.pdf" target="_blank">Consulter la documentation</a>.</p>'
+    },
+    3: {
+      title: 'Congrès ANALIM',
+      description: 'Site web développé avec PHP permettant de gérer des factures',
+      docs: '<p>Pas encore de doc disponible</p>',
+    },
+    4: {
+      title: 'Jardinier',
+      description: 'Site web développé avec Symfony et PHP.',
+      docs: '<p>Pas encore de doc disponible.</p>'
+    },
+    5: {
+      title: 'Bibliothèque numérique',
+      description: 'Application mobile réalisée avec Flutter et Dart sur Android Studio.',
+      docs: '<p>Pas encore de doc disponible.</p>'
+    },
+    6: {
+      title: 'Mairie de Glandon',
+      description: 'Mise en place du site avec WordPress, développement de quelques extensions en PHP',
+      docs: '<p><a href="https://mairie-glandon.fr" target="_blank">Consulter le site de la Mairie</a>.</p>'
+    }
+  };
+
   // Ajouter un événement au clic pour chaque card
   cards.forEach(card => {
-    card.addEventListener('click', function() {
+    card.addEventListener('click', function () {
       const projectId = this.dataset.id; // ID du projet à partir de l'attribut data-id
-      console.log(`Card clicked with project ID: ${projectId}`);
-
-      const projects = {
-        1: {
-          title: 'Resto',
-          description: 'A venir',
-          docs: '<p>Pas encore de doc</p>'
-        },
-        2: {
-          title: 'Seminaire',
-          description: 'Site web développé avec PHP permettant de choisir des conférénces, gérer des utilisateurs, ...',
-          docs: '<p><a href="assets/pdf/Doc_Seminaire.pdf" target="_blank">Consulter la documentation PDF</a>.</p>'
-        },
-        3: {
-          title: 'Congrès ANALIM',
-          description: 'Site web développé avec PHP permettant de gérer des factures',
-          docs: '<p>Pas encore de doc disponible</p>'
-        },
-        4: {
-          title: 'Jardinier',
-          description: 'Site web développé avec Symfony et PHP.',
-          docs: '<p>Pas encore de doc disponible.</p>'
-        },
-        5: {
-          title: 'Bibliothèque numérique',
-          description: 'Application mobile réalisé en avec Flutter et Dart sur Android Studio.',
-          docs: '<p>Pas encore de doc disponible.</p>'
-        },
-        6: {
-          title: 'Mairie de Glandon',
-          description: 'Mise en place du site avec WordPress, développement de quelques extensions en PHP',
-          docs: '<p><a href="https://mairie-glandon.fr" target="_blank">Consulter le site de la Mairie</a>.</p>'
-        }
-      };
-
       const project = projects[projectId];
-      console.log(project);
 
       if (project) {
         // Mise à jour du modal avec les informations du projet
         document.getElementById('modalTitle').textContent = project.title;
         document.getElementById('modalDescription').textContent = project.description;
         document.getElementById('modalDocs').innerHTML = project.docs;
-
-        // Afficher le modal
-        document.getElementById('projectModal').style.display = 'flex';
-      } else {
-        console.error('No project found for this ID');
+        // Afficher le modal avec animation
+        modal.classList.add('show');
+        modal.style.display = 'flex';
       }
     });
   });
 
   // Fermer le modal lorsqu'on clique sur la croix
-  document.getElementById('closeModal').addEventListener('click', function() {
-    document.getElementById('projectModal').style.display = 'none';
+  document.getElementById('closeModal').addEventListener('click', function () {
+    modal.classList.remove('show');
+    setTimeout(() => {
+      modal.style.display = 'none';
+    }, 400); // Temps correspondant à l'animation CSS
   });
 
-  // Fermer le modal avec la touche Échap
-  document.addEventListener('keydown', function(event) {
+  // Fermer la modal avec la touche Échap
+  document.addEventListener('keydown', function (event) {
     if (event.key === 'Escape') {
-      document.getElementById('projectModal').style.display = 'none';
+      modal.classList.remove('show');
+      setTimeout(() => {
+        modal.style.display = 'none';
+      }, 400);
     }
   });
 
   // Fermer la modal lorsqu'on clique en dehors de la modal
-  const modal = document.getElementById('projectModal');
-  modal.addEventListener('click', function(event) {
-    // Si l'utilisateur clique sur l'arrière-plan (et non sur le contenu de la modal), on ferme la modal
+  modal.addEventListener('click', function (event) {
     if (event.target === modal) {
-      modal.style.display = 'none';
+      modal.classList.remove('show');
+      setTimeout(() => {
+        modal.style.display = 'none';
+      }, 400);
     }
   });
 });
