@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     3: {
       title: 'Congrès ANALIM',
-      description: 'Site web développé avec PHP permettant de gérer des factures',
+      description: 'Dans le cadre du projet Congrès ANALIM, notre mission consistait à concevoir et à mettreen œuvre un système permettant la création, la gestion et l\'affichage des factures associéesaux participants du congrès.',
       docs: '<p><a href="assets/pdf/Doc_Congres.pdf" target="_blank">Consulter la documentation</a></p>',
     },
     4: {
