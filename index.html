@@ -586,18 +586,25 @@
         </div>
       </section>
       
-      <!-- Modal pour afficher les infos supplémentaires -->
       <div id="projectModal" class="modal">
         <div class="modal-content">
           <span id="closeModal" class="close">&times;</span>
           <h2 id="modalTitle" class="modal__title"></h2>
           <p id="modalDescription" class="modal__description"></p>
-          <div class="modal__document document-title">
+      
+          <!-- Section pour les technologies -->
+          <div class="modal__technologies">
+            <h3>Technologies utilisées</h3>
+            <ul id="modalTechnologies"></ul>
+          </div>
+      
+          <!-- Section pour la documentation -->
+          <div class="modal__document">
             <h3>Documentation</h3>
           </div>
           <div id="modalDocs" class="modal__docs"></div>
         </div>
-      </div>         
+      </div>       
 
       <!--==================== CONTACT ====================-->
       <section class="contact section" id="contact">

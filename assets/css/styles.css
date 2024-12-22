@@ -643,14 +643,15 @@ img {
   transform: translateY(0);
 }
 
+/* Style pour le contenu du modal */
 .modal-content {
   position: relative;
-  background: #ffffff;
+  background: linear-gradient(to bottom, #ffffff, #f3f4f6); /* Fond dégradé */
   padding: 30px;
-  border-radius: 15px;
+  border-radius: 20px; /* Coins arrondis */
   width: 85%;
   max-width: 750px;
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25); /* Ombre douce */
   animation: fadeInScale 0.4s ease-out;
 }
 
@@ -668,9 +669,11 @@ img {
 .modal__title {
   font-size: var(--h2-font-size);
   margin-bottom: 10px;
-  color: var(--first-color);
+  color: #6c63ff; /* Couleur moderne */
   text-align: center;
   font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .modal__description {
@@ -681,6 +684,7 @@ img {
   text-align: justify;
 }
 
+/* Centrer le bouton de documentation */
 .modal__docs {
   margin-top: 20px;
   text-align: center;
@@ -690,17 +694,71 @@ img {
   display: inline-block;
   margin-top: 10px;
   font-size: 1rem;
-  color: #007bff;
+  color: white;
+  background: #6c63ff; /* Couleur moderne */
   text-decoration: none;
-  padding: 10px 15px;
-  border: 1px solid #007bff;
-  border-radius: 5px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 30px; /* Bouton arrondi */
+  box-shadow: 0 5px 15px rgba(108, 99, 255, 0.3); /* Ombre */
   transition: all 0.3s ease;
 }
 
 .modal__docs a:hover {
-  background: #007bff;
-  color: white;
+  background: #4e4cc7; /* Couleur plus foncée au survol */
+  box-shadow: 0 8px 20px rgba(108, 99, 255, 0.5); /* Ombre renforcée */
+  transform: scale(1.05); /* Légère mise en avant */
+}
+
+/* Section des technologies */
+.modal__technologies h3 {
+  margin: 20px 0;
+  text-align: center;
+  font-size: var(--h3-font-size);
+  color: var(--first-color);
+}
+
+/* Style général des technologies */
+.modal__technologies ul {
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* Espacement entre les icônes */
+  padding: 0;
+  list-style: none;
+}
+
+.modal__technologies li {
+  display: flex;
+  flex-direction: column; /* Aligne le texte sous l'icône */
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  height: 70px; /* Fixe une hauteur pour éviter les sauts */
+}
+
+/* Icônes */
+.modal__technologies li img {
+  width: 64px; /* Taille des icônes */
+  height: 64px;
+  transition: transform 0.3s ease;
+}
+
+.modal__technologies li img:hover {
+  transform: scale(1.2); /* Agrandit l'icône au survol */
+}
+
+/* Affiche le nom sous l'icône */
+.modal__technologies li::after {
+  content: attr(data-name); /* Utilise l'attribut data-name pour afficher le nom */
+  display: none;
+  font-size: 0.9rem;
+  color: #000;
+  margin-top: 5px; /* Distance entre l'icône et le texte */
+}
+
+/* Affiche le nom au survol */
+.modal__technologies li:hover::after {
+  display: block;
 }
 
 .close {
@@ -713,12 +771,13 @@ img {
   transition: transform 0.3s ease;
 }
 
-.modal__close:hover {
+.close:hover {
   transform: scale(1.2);
   color: #ff0000;
 }
 
 .modal__document h3 {
+  margin: 20px;
   text-align: center;
   font-size: var(--h3-font-size);
   color: var(--first-color);

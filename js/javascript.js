@@ -8,40 +8,74 @@ document.addEventListener('DOMContentLoaded', () => {
   const projects = {
     1: {
       title: 'Resto',
-      description: 'Le projet Resto est une application web conçue pour faciliter la gestion des restaurants. Les utilisateurs peuvent y consulter une liste de restaurants, voir leurs détails, effectuer des recherches, s\'inscrire et se connecter.',
+      description: 'Le projet Resto est une application web conçue pour faciliter la gestion des restaurants.',
       docs: '<p><a href="assets/pdf/Doc_Projet_Resto.pdf" target="_blank">Consulter la documentation</a></p>',
+      technologies: [
+        { name: 'HTML', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg' },
+        { name: 'CSS', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg' },
+        { name: 'SQL', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg' },
+        { name: 'PHP', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg' },
+      ],
     },
     2: {
       title: 'Seminaire',
       description: 'Site web développé avec PHP permettant de choisir des conférénces, gérer des utilisateurs, ...',
-      docs: '<p><a href="assets/pdf/Doc_Seminaire.pdf" target="_blank">Consulter la documentation</a>.</p>'
+      docs: '<p><a href="assets/pdf/Doc_Seminaire.pdf" target="_blank">Consulter la documentation</a>.</p>',
+      technologies: [
+        { name: 'HTML', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg' },
+        { name: 'CSS', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg' },
+        { name: 'SQL', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg' },
+        { name: 'JSON', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/json/json-original.svg' },
+      ],
     },
     3: {
       title: 'Congrès ANALIM',
       description: 'Dans le cadre du projet Congrès ANALIM, notre mission consistait à concevoir et à mettreen œuvre un système permettant la création, la gestion et l\'affichage des factures associéesaux participants du congrès.',
       docs: '<p><a href="assets/pdf/Doc_Congres.pdf" target="_blank">Consulter la documentation</a></p>',
+      technologies: [
+        { name: 'HTML', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg' },
+        { name: 'CSS', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg' },
+        { name: 'SQL', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg' },
+        { name: 'PHP', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg' },
+      ],
     },
     4: {
       title: 'Jardinier',
-      description: 'Site web développé avec Symfony et PHP.',
-      docs: '<p>Pas encore de doc disponible.</p>'
+      description: 'Application web permettant de créer des devis pour un jardinier avec le framework Symfony.',
+      docs: '<p>Pas encore de doc disponible.</p>',
+      technologies: [
+        { name: 'Symfony', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/symfony/symfony-original.svg' },
+        { name: 'SQL', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg' },
+        { name: 'PHP', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg' },
+        { name: 'CSS', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg' },
+      ],
     },
     5: {
       title: 'Bibliothèque numérique',
       description: 'Application mobile réalisée avec Flutter et Dart sur Android Studio.',
-      docs: '<p>Pas encore de doc disponible.</p>'
+      docs: '<p>Pas encore de doc disponible.</p>',
+      technologies: [
+        { name: 'Flutter', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg' },
+        { name: 'Dart', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg' },
+      ],
     },
     6: {
       title: 'Mairie de Glandon',
       description: 'Mise en place du site avec WordPress, développement de quelques extensions en PHP',
-      docs: '<p><a href="https://mairie-glandon.fr" target="_blank">Consulter le site de la Mairie</a>.</p>'
+      docs: '<p><a href="https://mairie-glandon.fr" target="_blank">Consulter le site de la Mairie</a>.</p>',
+      technologies: [
+        { name: 'WordPress', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg' },
+        { name: 'PHP', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg' },
+        { name: 'SQL', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg' },
+        { name: 'CSS', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg' },
+      ],
     }
   };
 
   // Ajouter un événement au clic pour chaque card
   cards.forEach(card => {
     card.addEventListener('click', function () {
-      const projectId = this.dataset.id; // ID du projet à partir de l'attribut data-id
+      const projectId = this.dataset.id; // ID du projet
       const project = projects[projectId];
 
       if (project) {
@@ -49,9 +83,24 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('modalTitle').textContent = project.title;
         document.getElementById('modalDescription').textContent = project.description;
         document.getElementById('modalDocs').innerHTML = project.docs;
-        // Afficher le modal avec animation
+
+        // Ajout des icônes SVG pour les technologies
+        const techList = document.getElementById('modalTechnologies');
+        techList.innerHTML = ''; // Réinitialise la liste
+        if (project.technologies) {
+          project.technologies.forEach(tech => {
+            const li = document.createElement('li');
+            li.classList.add('tech-item');
+            li.setAttribute('data-name', tech.name); // Ajoute le nom comme un attribut
+            li.innerHTML = `<img src="${tech.icon}" alt="${tech.name}">`; // Supprime l'attribut title
+            techList.appendChild(li);
+          });
+        }
+
+
+        // Affichage du modal
         modal.classList.add('show');
-        modal.style.display = 'flex';
+        modal.style.display = 'flex'; 
       }
     });
   });
