@@ -1,10 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
   const modal = document.getElementById('projectModal');
 
-  // Sélectionner toutes les cards de travail
   const cards = document.querySelectorAll('.work__card');
 
-  // Définir les projets
   const projects = {
     1: {
       title: 'Resto',
@@ -25,7 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: 'HTML', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg' },
         { name: 'CSS', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg' },
         { name: 'SQL', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg' },
-        { name: 'JSON', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/json/json-original.svg' },
+        { name: 'JSON', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/json/json-plain.svg' },
+        { name: 'GitHub', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg' }
       ],
     },
     3: {
@@ -37,6 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: 'CSS', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg' },
         { name: 'SQL', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg' },
         { name: 'PHP', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg' },
+        { name: 'GitHub', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg' }
       ],
     },
     4: {
@@ -48,6 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: 'SQL', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg' },
         { name: 'PHP', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg' },
         { name: 'CSS', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg' },
+        { name: 'GitHub', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg' }
       ],
     },
     5: {
@@ -57,10 +58,11 @@ document.addEventListener('DOMContentLoaded', () => {
       technologies: [
         { name: 'Flutter', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg' },
         { name: 'Dart', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg' },
+        { name: 'GitHub', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg' }
       ],
     },
     6: {
-      title: 'Mairie de Glandon',
+      title: 'Stage Mairie de Glandon',
       description: 'Mise en place du site avec WordPress, développement de quelques extensions en PHP',
       docs: '<p><a href="https://mairie-glandon.fr" target="_blank">Consulter le site de la Mairie</a>.</p>',
       technologies: [
@@ -69,10 +71,23 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: 'SQL', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg' },
         { name: 'CSS', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg' },
       ],
+    },
+    7: {
+      title: 'Stage HôtenB.',
+      description: 'Lors de mon stage chez HotenB, j\'ai travaillé sur le développement d\'une application web de gestion de locations et réservations. Cette application permet de gérer l\'ensemble des réservations de chambres ou d\'autres types de locations, en incluant la gestion des clients, la mise à jour des réservations en temps réel, et l\'intégration de fonctionnalités telles que la gestion des paiements et la communication entre les administrateurs et les clients. Mon rôle principal était de développer plusieurs fonctionnalités de l\'application. J\'ai également participé à l\'amélioration de l\'interface utilisateur pour assurer une meilleure expérience client.',
+      docs: '<p>Pas de doc encore dispo</p>',
+      technologies: [
+        { name: 'React', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
+        { name: 'JS', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' },
+        { name: 'MongoDB', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg' },
+        { name: 'SCSS', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg' },
+        { name: 'TailWind', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg' },
+        { name: 'GitHub', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg' }
+      ],
     }
+    
   };
 
-  // Ajouter un événement au clic pour chaque card
   cards.forEach(card => {
     card.addEventListener('click', function () {
       const projectId = this.dataset.id; // ID du projet
