@@ -236,6 +236,7 @@ img {
 }
 
 .home__img {
+  width: 380px;
   z-index: 10;
   position: relative;
   vertical-align: middle;
@@ -871,7 +872,7 @@ img {
 
 
   .home__img {
-    width: 340px;
+    width: 280px;
   }
 
   .about__img-wrapper {
@@ -984,7 +985,7 @@ img {
   }
 
   .home__img {
-    width: 300px;
+    width: 280px;
   }
 }
 
