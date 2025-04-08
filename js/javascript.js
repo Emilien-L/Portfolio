@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
     4: {
       title: 'Jardinier',
       description: 'Application web permettant de créer des devis pour un jardinier avec le framework Symfony.',
-      docs: '<p>Pas encore de doc disponible.</p>',
+      docs: '<p><a href="assets/pdf/Documentation_Technique_Jardinier.pdf" target"_blank">Consulter la documentation</a></p>',
       technologies: [
         { name: 'Symfony', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/symfony/symfony-original.svg' },
         { name: 'SQL', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg' },
@@ -54,10 +54,11 @@ document.addEventListener('DOMContentLoaded', () => {
     5: {
       title: 'Bibliothèque numérique',
       description: 'Application mobile réalisée avec Flutter et Dart sur Android Studio.',
-      docs: '<p>Pas encore de doc disponible.</p>',
+      docs: '<p><a href="assets/pdf/Documentation_Bibliotheque.pdf" target"_blank">Consulter la documentation</a></p>',
       technologies: [
         { name: 'Flutter', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg' },
         { name: 'Dart', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg' },
+        { name: 'SQL', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg' },
         { name: 'GitHub', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg' }
       ],
     },
@@ -75,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
     7: {
       title: 'Stage HôtenB.',
       description: 'Lors de mon stage chez HotenB, j\'ai travaillé sur le développement d\'une application web de gestion de locations et réservations. Cette application permet de gérer l\'ensemble des réservations de chambres ou d\'autres types de locations, en incluant la gestion des clients, la mise à jour des réservations en temps réel, et l\'intégration de fonctionnalités telles que la gestion des paiements et la communication entre les administrateurs et les clients. Mon rôle principal était de développer plusieurs fonctionnalités de l\'application. J\'ai également participé à l\'amélioration de l\'interface utilisateur pour assurer une meilleure expérience client.',
-      docs: '<p>Pas de doc encore dispo</p>',
+      docs: '<p><a href="assets/pdf/Documentation_Stage_HotenB.pdf" target"_blank">Consulter la documentation</a></p>',
       technologies: [
         { name: 'React', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
         { name: 'JS', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' },
