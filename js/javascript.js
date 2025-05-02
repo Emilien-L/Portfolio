@@ -53,6 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
       ],
       skills: [
         "Développer une application en lien avec une base de données",
+        "Concevoir une application web",
         "Réaliser des études et développements informatiques",
         "Gérer les versions de logiciels et leurs mises à jour",
         "Collaborer avec les développeurs pour améliorer la qualité du logiciel",
