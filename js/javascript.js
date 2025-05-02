@@ -14,10 +14,16 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: 'SQL', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg' },
         { name: 'PHP', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg' },
       ],
+      skills: [
+        "Concevoir une application web",
+        "Développer une application en lien avec une base de données",
+        "Maintenir à jour la documentation technique et les manuels d'utilisation",
+        "Concevoir et maintenir un système de cybersécurité"
+      ]
     },
     2: {
       title: 'Seminaire',
-      description: 'Site web développé avec PHP permettant de choisir des conférénces, gérer des utilisateurs, ...',
+      description: 'Site web développé avec PHP permettant de choisir des conférences, gérer des utilisateurs, ...',
       docs: '<p><a href="assets/pdf/Doc_Seminaire.pdf" target="_blank">Consulter la documentation</a>.</p>',
       technologies: [
         { name: 'HTML', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg' },
@@ -26,10 +32,17 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: 'JSON', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/json/json-plain.svg' },
         { name: 'GitHub', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg' }
       ],
+      skills: [
+        "Analyser les besoins informatiques",
+        "Concevoir une application web",
+        "Gérer les versions de logiciels et leurs mises à jour",
+        "Respecter les normes de sécurité informatique dans le développement",
+        "Concevoir et maintenir un système de cybersécurité"
+      ]
     },
     3: {
       title: 'Congrès ANALIM',
-      description: 'Dans le cadre du projet Congrès ANALIM, notre mission consistait à concevoir et à mettreen œuvre un système permettant la création, la gestion et l\'affichage des factures associéesaux participants du congrès.',
+      description: 'Conception et mise en œuvre d’un système de gestion de factures pour les participants d’un congrès.',
       docs: '<p><a href="assets/pdf/Doc_Congres.pdf" target="_blank">Consulter la documentation</a></p>',
       technologies: [
         { name: 'HTML', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg' },
@@ -38,11 +51,18 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: 'PHP', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg' },
         { name: 'GitHub', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg' }
       ],
+      skills: [
+        "Développer une application en lien avec une base de données",
+        "Réaliser des études et développements informatiques",
+        "Gérer les versions de logiciels et leurs mises à jour",
+        "Collaborer avec les développeurs pour améliorer la qualité du logiciel",
+        "Concevoir et maintenir un système de cybersécurité"
+      ]
     },
     4: {
       title: 'Jardinier',
       description: 'Application web permettant de créer des devis pour un jardinier avec le framework Symfony.',
-      docs: '<p><a href="assets/pdf/Documentation_Technique_Jardinier.pdf" target"_blank">Consulter la documentation</a></p>',
+      docs: '<p><a href="assets/pdf/Documentation_Technique_Jardinier.pdf" target="_blank">Consulter la documentation</a></p>',
       technologies: [
         { name: 'Symfony', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/symfony/symfony-original.svg' },
         { name: 'SQL', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg' },
@@ -50,33 +70,51 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: 'CSS', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg' },
         { name: 'GitHub', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg' }
       ],
+      skills: [
+        "Concevoir une application web",
+        "Développer une application en lien avec une base de données",
+        "Gérer les versions de logiciels et leurs mises à jour",
+        "Respecter les normes de sécurité informatique dans le développement",
+        "Concevoir et maintenir un système de cybersécurité"
+      ]
     },
     5: {
       title: 'Bibliothèque numérique',
       description: 'Application mobile réalisée avec Flutter et Dart sur Android Studio.',
-      docs: '<p><a href="assets/pdf/Documentation_Bibliotheque.pdf" target"_blank">Consulter la documentation</a></p>',
+      docs: '<p><a href="assets/pdf/Documentation_Bibliotheque.pdf" target="_blank">Consulter la documentation</a></p>',
       technologies: [
         { name: 'Flutter', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg' },
         { name: 'Dart', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg' },
         { name: 'SQL', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg' },
         { name: 'GitHub', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg' }
       ],
+      skills: [
+        "Réaliser des études et développements informatiques",
+        "Concevoir et maintenir un système de cybersécurité",
+        "Analyser les besoins informatiques"
+      ]
     },
     6: {
       title: 'Stage Mairie de Glandon',
-      description: 'Mise en place du site avec WordPress, développement de quelques extensions en PHP',
+      description: 'Mise en place du site avec WordPress, développement de quelques extensions en PHP.',
       docs: '<p><a href="https://mairie-glandon.fr" target="_blank">Consulter le site de la Mairie</a>.</p>',
       technologies: [
         { name: 'WordPress', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg' },
         { name: 'PHP', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg' },
         { name: 'SQL', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg' },
-        { name: 'CSS', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg' },
+        { name: 'CSS', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg' }
       ],
+      skills: [
+        "Analyser les besoins informatiques",
+        "Réaliser des études et développements informatiques",
+        "Respecter les normes de sécurité informatique dans le développement",
+        "Concevoir et maintenir un système de cybersécurité",
+        "Gérer les versions de logiciels et leurs mises à jour",]
     },
     7: {
       title: 'Stage HôtenB.',
-      description: 'Lors de mon stage chez HotenB, j\'ai travaillé sur le développement d\'une application web de gestion de locations et réservations. Cette application permet de gérer l\'ensemble des réservations de chambres ou d\'autres types de locations, en incluant la gestion des clients, la mise à jour des réservations en temps réel, et l\'intégration de fonctionnalités telles que la gestion des paiements et la communication entre les administrateurs et les clients. Mon rôle principal était de développer plusieurs fonctionnalités de l\'application. J\'ai également participé à l\'amélioration de l\'interface utilisateur pour assurer une meilleure expérience client.',
-      docs: '<p><a href="assets/pdf/Documentation_Stage_HotenB.pdf" target"_blank">Consulter la documentation</a></p>',
+      description: 'Développement d\'une application web de réservation avec React, MongoDB et une interface dynamique.',
+      docs: '<p><a href="assets/pdf/Documentation_Stage_HotenB.pdf" target="_blank">Consulter la documentation</a></p>',
       technologies: [
         { name: 'React', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
         { name: 'JS', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' },
@@ -85,21 +123,29 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: 'TailWind', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg' },
         { name: 'GitHub', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg' }
       ],
+      skills: [
+        "Concevoir une application web",
+        "Collaborer avec les développeurs pour améliorer la qualité du logiciel",
+        "Concevoir et maintenir un système de cybersécurité",
+        "Réaliser des études et développements informatiques",
+        "Analyser les besoins informatiques",
+        "Respecter les normes de sécurité informatique dans le développement"
+      ]
     }
-    
   };
+  
 
   cards.forEach(card => {
     card.addEventListener('click', function () {
-      const projectId = this.dataset.id; // ID du projet
+      const projectId = this.dataset.id;
       const project = projects[projectId];
-
+  
       if (project) {
         // Mise à jour du modal avec les informations du projet
         document.getElementById('modalTitle').textContent = project.title;
         document.getElementById('modalDescription').textContent = project.description;
         document.getElementById('modalDocs').innerHTML = project.docs;
-
+  
         // Ajout des icônes SVG pour les technologies
         const techList = document.getElementById('modalTechnologies');
         techList.innerHTML = ''; // Réinitialise la liste
@@ -107,19 +153,40 @@ document.addEventListener('DOMContentLoaded', () => {
           project.technologies.forEach(tech => {
             const li = document.createElement('li');
             li.classList.add('tech-item');
-            li.setAttribute('data-name', tech.name); // Ajoute le nom comme un attribut
-            li.innerHTML = `<img src="${tech.icon}" alt="${tech.name}">`; // Supprime l'attribut title
+            li.setAttribute('data-name', tech.name);
+            li.innerHTML = `<img src="${tech.icon}" alt="${tech.name}">`;
             techList.appendChild(li);
           });
         }
-
-
+  
+        // Ajout des compétences liées
+        const skillList = document.getElementById('modalSkills');
+        skillList.innerHTML = ''; // Réinitialise la liste
+        if (project.skills) {
+          project.skills.forEach(skill => {
+            const li = document.createElement('li');
+            li.innerHTML = `<a href="#skills" class="skill-link">${skill}</a>`;
+            skillList.appendChild(li);
+          });
+        }
+  
         // Affichage du modal
         modal.classList.add('show');
-        modal.style.display = 'flex'; 
+        modal.style.display = 'flex';
+
+        // Fermer la modal au clic sur un lien de compétence
+        document.querySelectorAll('.skill-link').forEach(link => {
+          link.addEventListener('click', function () {
+            modal.classList.remove('show');
+            setTimeout(() => {
+              modal.style.display = 'none';
+            }, 400); // Fermeture avec délai pour l'animation
+          });
+        });
       }
     });
   });
+  
 
   // Fermer le modal lorsqu'on clique sur la croix
   document.getElementById('closeModal').addEventListener('click', function () {

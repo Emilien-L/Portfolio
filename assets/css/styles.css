@@ -754,6 +754,43 @@ img {
   display: block;
 }
 
+/* Section des compétences */
+.modal__skills {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.modal__skills h3 {
+  margin: 20px 0;
+  font-size: var(--h3-font-size);
+  color: var(--first-color);
+}
+
+/* Liste des compétences */
+.modal__skills ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Lien individuel d’une compétence */
+.modal__skills li a.skill-link {
+  color: #4f8df7;
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.modal__skills li a.skill-link:hover {
+  text-decoration: none;
+  color: #2563eb;
+}
+
+
 .close {
   position: absolute;
   top: 10px;
