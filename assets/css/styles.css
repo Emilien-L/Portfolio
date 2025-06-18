@@ -352,6 +352,7 @@ img {
 
 .data__item {
   display: flex;
+  align-items: center;
   column-gap: .75rem;
 }
 
