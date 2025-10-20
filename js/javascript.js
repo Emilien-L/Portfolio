@@ -216,7 +216,43 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 400);
     }
   });
-});
+
+
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav__list a.nav__link');
+
+  // Options pour l'IntersectionObserver
+  const observerOptions = {
+    root: null, // C'est le viewport
+    rootMargin: '-40% 0px -60% 0px',
+    threshold: 0
+  };
+
+  const navHighlighter = (entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.getAttribute('id');
+        const activeLink = document.querySelector(`.nav__list a[href="#${id}"]`);
+
+        // Enlève 'active-link' de tous les liens
+        navLinks.forEach(link => {
+          link.classList.remove('active-link');
+        });
+
+        // Ajoute 'active-link' au lien correspondant
+        if (activeLink) {
+          activeLink.classList.add('active-link');
+        }
+      }
+    });
+  };
+
+  const observer = new IntersectionObserver(navHighlighter, observerOptions);
+
+  // Observe chaque section
+  sections.forEach(section => {
+    observer.observe(section);
+  });
 
 
   // Initialiser EmailJS avec ton User ID (remplace par le vrai User ID)
@@ -226,13 +262,34 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('contact-form').addEventListener('submit', function (event) {
     event.preventDefault(); // Empêche le rechargement de la page
 
+    // Récupère l'élément de message
+    const formMessage = document.getElementById('form-message');
+
     // Envoie le formulaire via EmailJS
     emailjs.sendForm('service_ec6q7sc', 'template_z0xmkse', this)
       .then(function(response) {
-        alert('Message envoyé avec succès !');
-        // Tu peux aussi vider le formulaire si nécessaire
+        // Affiche le message de succès
+        formMessage.textContent = 'Message envoyé avec succès !';
+        formMessage.className = 'success'; // Applique le style vert
+
+        // Vide le formulaire
         document.getElementById('contact-form').reset();
+
+        // Efface le message après 5 secondes
+        setTimeout(() => {
+          formMessage.textContent = '';
+        }, 5000);
+
       }, function(error) {
-        alert('Une erreur est survenue. Veuillez réessayer.');
+        // Affiche le message d'erreur
+        formMessage.textContent = 'Une erreur est survenue. Veuillez réessayer.';
+        formMessage.className = 'error'; // Applique le style rouge
+
+        // Efface le message après 5 secondes
+        setTimeout(() => {
+          formMessage.textContent = '';
+        }, 5000);
       });
   });
+
+}); 

@@ -38,7 +38,7 @@
 
         <ul class="nav__list">
           <li class="nav__item">
-            <a href="#home" class="nav__link active-link">Accueil</a>
+            <a href="#home" class="nav__link">Accueil</a>
           </li>
 
           <li class="nav__item">
@@ -75,11 +75,11 @@
         <div class="home__container container grid">
           <div class="home__content">
             <span class="home__small">Bonjour</span> <br />
-            <hi class="home__title">
+            <h1 class="home__title">
               <span>Je suis</span> Emilien <br />
               un <span>étudiant en developpement</span> <br />
                <span>informatique</span>
-            </hi>
+            </h1>
 
             <p class="home__description">
               Étudiant en développement, je m’intéresse aussi à la data pour concevoir des applications web innovantes, alliant technique et besoins utilisateurs.
@@ -113,7 +113,7 @@
             </h2>
 
             <p class="about__description">
-              À la suite de mon BTS SIO, spécialité SLAM, je vais intégrer la Licence 3 MIAGE (Méthodes Informatiques Appliquées à la Gestion des Entreprises) à l’Université 3 de Toulouse.<br><br>
+              À la suite de mon BTS SIO, spécialité SLAM, je vais intégrer la Licence 3 MIAGE (Méthodes Informatiques Appliquées à la Gestion des Entreprises) à l’Université de Toulouse.<br><br>
               Cette formation me permettra de renforcer mes compétences en data tout en poursuivant ma progression dans le développement informatique.
               J’ai acquis des compétences solides dans le développement d’applications web et mobiles, 
               en particulier avec des technologies comme PHP, Symfony, Java et Flutter. Je suis également curieux d’explorer 
@@ -173,8 +173,27 @@
             <div class="resume__items">
               <div class="resume__item">
                 <div class="resume__header">
-                  <h3 class="resume__subtitle">BTS SIO Spécialité SLAM</h3>
+                  <h3 class="resume__subtitle">Licence 3 MIAGE</h3>
                   <span class="resume__icon">+</span>
+                </div>
+
+                <div class="resume__content">
+                  <div class="resume__date-title">
+                    <h3 class="resume__title">Université de Toulouse</h3>
+                    <span class="resume__date">2025 - en cours</span>
+                  </div>
+
+                  <p class="resume__description">
+                    Formation combinant informatique et gestion des organisations.
+                    Développement de compétences en ingénierie logicielle, gestion de projets et conception d’applications,
+                    avec une préparation en chef de projet informatique via études de cas et projets concrets.
+                </div>
+              </div>
+
+              <div class="resume__item">
+                <div class="resume__header">
+                  <h3 class="resume__subtitle">BTS SIO Spécialité SLAM</h3>
+                  <span class="resume__icon">-</span>
                 </div>
 
                 <div class="resume__content">
@@ -193,7 +212,7 @@
               <div class="resume__item">
                 <div class="resume__header">
                   <h3 class="resume__subtitle">IUT Informatique</h3>
-                  <span class="resume__icon">-</span>
+                  <span class="resume__icon">+</span>
                 </div>
 
                 <div class="resume__content">
@@ -206,25 +225,6 @@
                     Approfondissement des bases en informatique, notamment en algorithmique, programmation  
                     et systèmes d'exploitation. Initiation à des technologies modernes et au travail en équipe  
                     sur des projets concrets.
-                </div>
-              </div>
-
-              <div class="resume__item">
-                <div class="resume__header">
-                  <h3 class="resume__subtitle">Baccalauréat Technologique STI2D</h3>
-                  <span class="resume__icon">+</span>
-                </div>
-
-                <div class="resume__content">
-                  <div class="resume__date-title">
-                    <h3 class="resume__title">Lycée Raoul Dautry</h3>
-                    <span class="resume__date">2022</span>
-                  </div>
-
-                  <p class="resume__description">
-                    Filière dédiée aux sciences et technologies de l'industrie et du développement durable,  
-                    avec un accent sur l’innovation, les systèmes numériques.  
-                    Développement de compétences en programmation, électronique et modélisation.
                 </div>
               </div>
             </div>
@@ -574,7 +574,7 @@
               <i class="fa-solid fa-location-dot contact__icon"></i>
               <div>
                 <h3 class="contact__title">Adresse</h3>
-                <span class="contact__data">Limoges</span>
+                <span class="contact__data">Toulouse</span>
               </div>
             </div>
           </div>
@@ -600,6 +600,9 @@
             </div>
       
             <button type="submit" class="btn contact__btn">Envoyer un message</button>
+
+            <p id="form-message" style="margin-top: 1rem; text-align: center;"></p>
+
           </form>
         </div>
       </section>

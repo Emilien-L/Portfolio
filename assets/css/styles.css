@@ -851,6 +851,19 @@ img {
   column-gap: 1.25rem;
 }
 
+#form-message {
+  font-size: var(--large-font-size);
+  font-weight: var(--weight-600);
+}
+
+#form-message.success {
+  color: hsl(120, 70%, 50%); /* Vert */
+}
+
+#form-message.error {
+  color: hsl(0, 70%, 50%); /* Rouge */
+}
+
 .input__control {
   color: var(--title-color);
   background-color: var(--container-color);
