@@ -714,7 +714,9 @@ img {
 }
 
 .modal__docs a {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   margin-top: 10px;
   font-size: 1rem;
   color: white;
@@ -827,6 +829,15 @@ img {
 .modal__skills li a.skill-link:hover {
   text-decoration: none;
   color: #2563eb;
+}
+
+.modal__skills li a.skill-link::before {
+  content: '\f0c1';
+  font-family: 'Font Awesome 6 Free'; 
+  font-weight: 900;
+  margin-right: 0.5rem;
+  font-size: 0.8em;
+  color: #4f8df7; 
 }
 
 .close {
@@ -1163,7 +1174,6 @@ img {
     max-height: 500px;
     padding: 1.75rem;
   }
-
 
   /*=============== MODAL SCROLL FIX ===============*/
   body.modal-open {

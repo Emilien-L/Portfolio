@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
     1: {
       title: 'Resto',
       description: 'Le projet Resto est une application web conçue pour faciliter la gestion des restaurants.',
-      docs: '<p><a href="assets/pdf/Doc_Projet_Resto.pdf" target="_blank">Consulter la documentation</a></p>',
+      docs: 'assets/pdf/Documentation_Technique_Jardinier.pdf',
       technologies: [
         { name: 'HTML', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg' },
         { name: 'CSS', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg' },
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
     2: {
       title: 'Seminaire',
       description: 'Site web développé avec PHP permettant de choisir des conférences, gérer des utilisateurs, ...',
-      docs: '<p><a href="assets/pdf/Doc_Seminaire.pdf" target="_blank">Consulter la documentation</a>.</p>',
+      docs: 'assets/pdf/Doc_Seminaire.pdf',
       technologies: [
         { name: 'HTML', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg' },
         { name: 'CSS', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg' },
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
     3: {
       title: 'Congrès ANALIM',
       description: 'Conception et mise en œuvre d’un système de gestion de factures pour les participants d’un congrès.',
-      docs: '<p><a href="assets/pdf/Doc_Congres.pdf" target="_blank">Consulter la documentation</a></p>',
+      docs: 'assets/pdf/Doc_Congres.pdf',
       technologies: [
         { name: 'HTML', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg' },
         { name: 'CSS', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg' },
@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
     4: {
       title: 'Jardinier',
       description: 'Application web permettant de créer des devis pour un jardinier avec le framework Symfony.',
-      docs: '<p><a href="assets/pdf/Documentation_Technique_Jardinier.pdf" target="_blank">Consulter la documentation</a></p>',
+      docs: 'assets/pdf/Documentation_Technique_Jardinier.pdf',
       technologies: [
         { name: 'Symfony', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/symfony/symfony-original.svg' },
         { name: 'SQL', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg' },
@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
     5: {
       title: 'Bibliothèque numérique',
       description: 'Application mobile réalisée avec Flutter et Dart sur Android Studio.',
-      docs: '<p><a href="assets/pdf/Documentation_Bibliotheque.pdf" target="_blank">Consulter la documentation</a></p>',
+      docs: 'assets/pdf/Documentation_Bibliotheque.pdf',
       technologies: [
         { name: 'Flutter', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg' },
         { name: 'Dart', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg' },
@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
     6: {
       title: 'Stage Mairie de Glandon',
       description: 'Mise en place du site avec WordPress, développement de quelques extensions en PHP.',
-      docs: '<p><a href="https://mairie-glandon.fr" target="_blank">Consulter le site de la Mairie</a>.</p>',
+      docs: 'https://mairie-glandon.fr',
       technologies: [
         { name: 'WordPress', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg' },
         { name: 'PHP', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg' },
@@ -145,7 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
     7: {
       title: 'Stage HôtenB.',
       description: 'Développement d\'une application web de réservation avec React, MongoDB et une interface dynamique.',
-      docs: '<p><a href="assets/pdf/Documentation_Stage_HotenB.pdf" target="_blank">Consulter la documentation</a></p>',
+      docs: 'assets/pdf/Documentation_Stage_HotenB.pdf',
       technologies: [
         { name: 'React', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
         { name: 'JS', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' },
@@ -175,7 +175,17 @@ document.addEventListener('DOMContentLoaded', () => {
         // Mise à jour du modal avec les informations du projet
         document.getElementById('modalTitle').textContent = project.title;
         document.getElementById('modalDescription').textContent = project.description;
-        document.getElementById('modalDocs').innerHTML = project.docs;
+
+        const docsContainer = document.getElementById('modalDocs');
+        docsContainer.innerHTML = ''; // Vide le conteneur
+
+        if (project.docs) {
+          const docsLink = document.createElement('a');
+          docsLink.href = project.docs;
+          docsLink.target = '_blank';
+          docsLink.innerHTML = '<i class="fa-solid fa-file-pdf"></i> Consulter la documentation';
+          docsContainer.appendChild(docsLink);
+        }
   
         // Ajout des icônes SVG pour les technologies
         const techList = document.getElementById('modalTechnologies');
