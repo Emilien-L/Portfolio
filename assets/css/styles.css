@@ -1044,11 +1044,10 @@ img {
   }
 }
 
-/*=============== MODAL FIX POUR ÉCRANS BAS (LAPTOPS...) ===============*/
 @media screen and (max-height: 800px) {
   .modal-content {
-    max-height: 90vh; /* Hauteur max = 90% de l'écran */
-    overflow-y: auto; /* Ajoute le scroll si besoin */
+    max-height: 90vh;
+    overflow-y: auto;
   }
 }
 
