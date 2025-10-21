@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ======================================================
 
 
-  
+
   const modal = document.getElementById('projectModal');
 
   const cards = document.querySelectorAll('.work__card');
@@ -204,11 +204,13 @@ document.addEventListener('DOMContentLoaded', () => {
         // Affichage du modal
         modal.classList.add('show');
         modal.style.display = 'flex';
+        document.body.classList.add('modal-open');
 
         // Fermer la modal au clic sur un lien de compétence
         document.querySelectorAll('.skill-link').forEach(link => {
           link.addEventListener('click', function () {
             modal.classList.remove('show');
+            document.body.classList.remove('modal-open');
             setTimeout(() => {
               modal.style.display = 'none';
             }, 400); // Fermeture avec délai pour l'animation
@@ -222,6 +224,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Fermer le modal lorsqu'on clique sur la croix
   document.getElementById('closeModal').addEventListener('click', function () {
     modal.classList.remove('show');
+    document.body.classList.remove('modal-open');
     setTimeout(() => {
       modal.style.display = 'none';
     }, 400); // Temps correspondant à l'animation CSS
@@ -231,6 +234,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('keydown', function (event) {
     if (event.key === 'Escape') {
       modal.classList.remove('show');
+      document.body.classList.remove('modal-open');
       setTimeout(() => {
         modal.style.display = 'none';
       }, 400);
@@ -241,6 +245,7 @@ document.addEventListener('DOMContentLoaded', () => {
   modal.addEventListener('click', function (event) {
     if (event.target === modal) {
       modal.classList.remove('show');
+      document.body.classList.remove('modal-open');
       setTimeout(() => {
         modal.style.display = 'none';
       }, 400);

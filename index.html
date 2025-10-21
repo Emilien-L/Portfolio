@@ -12,8 +12,7 @@
 
     <!--=============== JS ===============-->
     <script src="js/javascript.js" defer></script>
-    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
     <title>Portfolio | Emilien Lecompte</title>
 
@@ -555,26 +554,30 @@
       <div id="projectModal" class="modal">
         <div class="modal-content">
           <span id="closeModal" class="close">&times;</span>
-          <h2 id="modalTitle" class="modal__title"></h2>
-          <p id="modalDescription" class="modal__description"></p>
       
-          <!-- Section pour les technologies -->
-          <div class="modal__technologies">
-            <h3>Technologies utilisées</h3>
-            <ul id="modalTechnologies"></ul>
+          <h2 id="modalTitle" class="modal__title"></h2>
+          
+          <div class="modal__main-info">
+            <p id="modalDescription" class="modal__description"></p>
+            
+            <div class="modal__document">
+              <h3>Documentation</h3>
+              <div id="modalDocs" class="modal__docs"></div>
+            </div>
+          </div>
+          
+          <div class="modal__meta-info">
+            <div class="modal__technologies">
+              <h3>Technologies utilisées</h3>
+              <ul id="modalTechnologies"></ul>
+            </div>
+  
+            <div class="modal__skills">
+              <h3>Compétences mobilisées</h3>
+              <ul id="modalSkills"></ul>
+            </div>
           </div>
 
-          <!-- Section pour les compétences -->
-          <div class="modal__skills">
-            <h3>Compétences mobilisées</h3>
-            <ul id="modalSkills"></ul>
-          </div>
- 
-          <!-- Section pour la documentation -->
-          <div class="modal__document">
-            <h3>Documentation</h3>
-          </div>
-          <div id="modalDocs" class="modal__docs"></div>
         </div>
       </div>       
 

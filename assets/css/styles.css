@@ -651,13 +651,19 @@ img {
 /* Style pour le contenu du modal */
 .modal-content {
   position: relative;
-  background: linear-gradient(to bottom, #ffffff, #f3f4f6); /* Fond dégradé */
+  background: linear-gradient(to bottom, #ffffff, #f3f4f6);
   padding: 30px;
-  border-radius: 20px; /* Coins arrondis */
+  border-radius: 20px;
   width: 85%;
-  max-width: 750px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25); /* Ombre douce */
+  max-width: 850px; /* On peut l'élargir un peu */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
   animation: fadeInScale 0.4s ease-out;
+
+  /* Application de la grille */
+  display: grid;
+  grid-template-columns: 3fr 2fr; /* Ratio 60% / 40% */
+  gap: 2rem; /* Espace entre les colonnes */
+  align-items: flex-start; /* Aligne le contenu en haut */
 }
 
 @keyframes fadeInScale {
@@ -672,27 +678,39 @@ img {
 }
 
 .modal__title {
+  grid-column: 1 / -1; 
   font-size: var(--h2-font-size);
   margin-bottom: 10px;
-  color: #6c63ff; /* Couleur moderne */
-  text-align: center;
+  color: #6c63ff;
+  text-align: center; /* Le titre reste centré */
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
+.modal__main-info {
+  /* Ce conteneur est dans la colonne 1 */
+}
+
 .modal__description {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #555555;
   line-height: 1.6;
   margin-bottom: 20px;
-  text-align: center;
+  text-align: left;
+}
+
+.modal__document h3 {
+  margin: 20px 0;
+  text-align: left; /* !!! Aligné à gauche */
+  font-size: var(--h3-font-size);
+  color: var(--first-color);
 }
 
 /* Centrer le bouton de documentation */
 .modal__docs {
   margin-top: 20px;
-  text-align: center;
+  text-align: left;
 }
 
 .modal__docs a {
@@ -700,20 +718,30 @@ img {
   margin-top: 10px;
   font-size: 1rem;
   color: white;
-  background: #6c63ff; /* Couleur moderne */
+  background: #6c63ff;
   text-decoration: none;
   padding: 12px 20px;
   border: none;
-  border-radius: 30px; /* Bouton arrondi */
-  box-shadow: 0 5px 15px rgba(108, 99, 255, 0.3); /* Ombre */
+  border-radius: 30px;
+  box-shadow: 0 5px 15px rgba(108, 99, 255, 0.3);
   transition: all 0.3s ease;
 }
 
 .modal__docs a:hover {
-  background: #4e4cc7; /* Couleur plus foncée au survol */
-  box-shadow: 0 8px 20px rgba(108, 99, 255, 0.5); /* Ombre renforcée */
-  transform: scale(1.05); /* Légère mise en avant */
+  background: #4e4cc7;
+  box-shadow: 0 8px 20px rgba(108, 99, 255, 0.5);
+  transform: scale(1.05);
 }
+
+
+/* Colonne 2 : Tech et Compétences */
+.modal__meta-info {
+  /* Ce conteneur est dans la colonne 2 */
+  background-color: rgba(0, 0, 0, 0.03); /* Léger fond pour séparer */
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
 
 /* Section des technologies */
 .modal__technologies h3 {
@@ -723,45 +751,43 @@ img {
   color: var(--first-color);
 }
 
-/* Style général des technologies */
 .modal__technologies ul {
   display: flex;
-  justify-content: center;
-  gap: 15px; /* Espacement entre les icônes */
+  justify-content: flex-start; /* !!! Alignées à gauche */
+  gap: 15px;
   padding: 0;
   list-style: none;
+  flex-wrap: wrap; /* Permet aux icônes de passer à la ligne */
 }
 
 .modal__technologies li {
   display: flex;
-  flex-direction: column; /* Aligne le texte sous l'icône */
+  flex-direction: column;
   align-items: center;
   position: relative;
   cursor: pointer;
-  height: 70px; /* Fixe une hauteur pour éviter les sauts */
+  height: 70px;
 }
 
-/* Icônes */
+/* ... (le reste de .modal__technologies li img, li::after etc. ne change pas) ... */
 .modal__technologies li img {
-  width: 64px; /* Taille des icônes */
+  width: 64px;
   height: 64px;
   transition: transform 0.3s ease;
 }
 
 .modal__technologies li img:hover {
-  transform: scale(1.2); /* Agrandit l'icône au survol */
+  transform: scale(1.2);
 }
 
-/* Affiche le nom sous l'icône */
 .modal__technologies li::after {
-  content: attr(data-name); /* Utilise l'attribut data-name pour afficher le nom */
+  content: attr(data-name);
   display: none;
   font-size: 0.9rem;
   color: #000;
-  margin-top: 5px; /* Distance entre l'icône et le texte */
+  margin-top: 5px;
 }
 
-/* Affiche le nom au survol */
 .modal__technologies li:hover::after {
   display: block;
 }
@@ -769,21 +795,22 @@ img {
 /* Section des compétences */
 .modal__skills {
   margin-top: 30px;
-  text-align: center;
+  text-align: left;
 }
 
 .modal__skills h3 {
   margin: 20px 0;
   font-size: var(--h3-font-size);
   color: var(--first-color);
+  text-align: left;
 }
 
 /* Liste des compétences */
 .modal__skills ul {
   list-style: none;
   padding: 0;
-  margin: 0 auto;
-  max-width: 600px;
+  margin: 0;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -802,7 +829,6 @@ img {
   color: #2563eb;
 }
 
-
 .close {
   position: absolute;
   top: 10px;
@@ -811,6 +837,7 @@ img {
   color: var(--body-color);
   cursor: pointer;
   transition: transform 0.3s ease;
+  z-index: 10;
 }
 
 .close:hover {
@@ -1030,8 +1057,6 @@ img {
   overflow: hidden;
   transition: all .3s ease;
 }
-
-
   .nav__toggle {
   display: block;
   color: var(--text-color);
@@ -1043,6 +1068,22 @@ img {
 
   .home__img {
     width: 280px;
+  }
+
+  .modal-content {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 20px;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  .modal__meta-info {
+    padding: 1rem;
+  }
+
+  .modal__description {
+    font-size: 1rem;
   }
 }
 
@@ -1121,5 +1162,11 @@ img {
   .nav__list.nav-open {
     max-height: 500px;
     padding: 1.75rem;
+  }
+
+
+  /*=============== MODAL SCROLL FIX ===============*/
+  body.modal-open {
+    overflow: hidden;
   }
 }
