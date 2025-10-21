@@ -30,13 +30,11 @@
       <nav class="nav container">
         <a href="index.html" class="nav__logo">Emilien</a>
 
-        <input type="checkbox" id="nav-toggler">
+        <button class="nav__toggle" id="nav-toggle-btn" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-menu">
+        <i class="fa-solid fa-bars"></i>
+        </button>
 
-        <label for="nav-toggler" class="nav__toggle">
-          <i class="fa-solid fa-bars"></i>
-        </label>
-
-        <ul class="nav__list">
+        <ul class="nav__list" id="nav-menu">
           <li class="nav__item">
             <a href="#home" class="nav__link">Accueil</a>
           </li>
@@ -376,87 +374,115 @@
           Mes compétences
         </h2>
 
-        <div class="skills__container container grid">
+        <div class="skills__container container">
           <div class="skills__item">
-            <div class="skills__titles">
+            <div class="skills__header">
               <h3 class="skills__name">Analyser les besoins informatiques</h3>
+              <span class="skills__icon"><i class="fa-solid fa-plus"></i></span>
             </div>
-            <p class="skills__description">
-              Identifier et analyser les besoins des utilisateurs afin de définir les solutions informatiques adaptées pour répondre aux exigences fonctionnelles.
-            </p>
+            <div class="skills__content">
+              <p class="skills__description">
+                Identifier et analyser les besoins des utilisateurs afin de définir les solutions informatiques adaptées pour répondre aux exigences fonctionnelles.
+              </p>
+            </div>
           </div>
 
           <div class="skills__item">
-            <div class="skills__titles">
+            <div class="skills__header">
               <h3 class="skills__name">Réaliser des études et développements informatiques</h3>
+              <span class="skills__icon"><i class="fa-solid fa-plus"></i></span>
             </div>
-            <p class="skills__description">
-              Réaliser des études techniques et mettre en œuvre des développements logiciels en fonction des besoins du projet.
-            </p>
+            <div class="skills__content">
+              <p class="skills__description">
+                Réaliser des études techniques et mettre en œuvre des développements logiciels en fonction des besoins du projet.
+              </p>
+            </div>
           </div>
 
           <div class="skills__item">
-            <div class="skills__titles">
+            <div class="skills__header">
               <h3 class="skills__name">Développer une application en lien avec une base de données</h3>
+              <span class="skills__icon"><i class="fa-solid fa-plus"></i></span>
             </div>
-            <p class="skills__description">
-              Concevoir et développer des applications interagissant avec des bases de données pour une gestion optimale des informations.
-            </p>
+            <div class="skills__content">
+              <p class="skills__description">
+                Concevoir et développer des applications interagissant avec des bases de données pour une gestion optimale des informations.
+              </p>
+            </div>
           </div>
 
           <div class="skills__item">
-            <div class="skills__titles">
+            <div class="skills__header">
               <h3 class="skills__name">Concevoir une application web</h3>
+              <span class="skills__icon"><i class="fa-solid fa-plus"></i></span>
             </div>
-            <p class="skills__description">
-              Concevoir et développer des applications web performantes, sécurisées et faciles à utiliser, en intégrant les meilleures pratiques de développement.
-            </p>
+            <div class="skills__content">
+              <p class="skills__description">
+                Concevoir et développer des applications web performantes, sécurisées et faciles à utiliser, en intégrant les meilleures pratiques de développement.
+              </p>
+            </div>
           </div>
 
           <div class="skills__item">
-            <div class="skills__titles">
+            <div class="skills__header">
               <h3 class="skills__name">Gérer les versions de logiciels et leurs mises à jour</h3>
+              <span class="skills__icon"><i class="fa-solid fa-plus"></i></span>
             </div>
-            <p class="skills__description">
-              Utiliser des outils de gestion de version comme Git pour gérer les versions du logiciel et planifier les mises à jour.
-            </p>
+            <div class="skills__content">
+              <p class="skills__description">
+                Utiliser des outils de gestion de version comme Git pour gérer les versions du logiciel et planifier les mises à jour.
+              </p>
+            </div>
           </div>
 
           <div class="skills__item">
-            <div class="skills__titles">
+            <div class="skills__header">
               <h3 class="skills__name">Maintenir à jour la documentation technique et les manuels d'utilisation</h3>
+              <span class="skills__icon"><i class="fa-solid fa-plus"></i></span>
             </div>
-            <p class="skills__description">
-              Rédiger et maintenir la documentation technique à jour pour les utilisateurs, les développeurs et les administrateurs.
-            </p>
+            <div class="skills__content">
+              <p class="skills__description">
+                Rédiger et maintenir la documentation technique à jour pour les utilisateurs, les développeurs et les administrateurs.
+              </p>
+            </div>
           </div>
 
           <div class="skills__item">
-            <div class="skills__titles">
+            <div class="skills__header">
               <h3 class="skills__name">Collaborer avec les développeurs pour améliorer la qualité du logiciel</h3>
+              <span class="skills__icon"><i class="fa-solid fa-plus"></i></span>
             </div>
-            <p class="skills__description">
-              Travailler en étroite collaboration avec les équipes de développement pour améliorer la qualité du code et optimiser les performances du logiciel.
-            </p>
+            <div class="skills__content">
+              <p class="skills__description">
+                Travailler en étroite collaboration avec les équipes de développement pour améliorer la qualité du code et optimiser les performances du logiciel.
+              </p>
+            </div>
           </div>
 
           <div class="skills__item">
-            <div class="skills__titles">
+            <div class="skills__header">
               <h3 class="skills__name">Respecter les normes de sécurité informatique dans le développement</h3>
+              <span class="skills__icon"><i class="fa-solid fa-plus"></i></span>
             </div>
-            <p class="skills__description">
-              Appliquer les meilleures pratiques de sécurité lors du développement logiciel pour garantir la confidentialité, l'intégrité et la disponibilité des données.
-            </p>
+            <div class="skills__content">
+              <p class="skills__description">
+                Appliquer les meilleures pratiques de sécurité lors du développement logiciel pour garantir la confidentialité, l'intégrité et la disponibilité des données.
+              </p>
+            </div>
           </div>
 
           <div class="skills__item">
-            <div class="skills__titles">
+            <div class="skills__header">
               <h3 class="skills__name">Concevoir et maintenir un système de cybersécurité</h3>
+              <span class="skills__icon"><i class="fa-solid fa-plus"></i></span>
             </div>
-            <p class="skills__description">
-              Concevoir des architectures de cybersécurité robustes et mettre en place des mécanismes de protection pour assurer la sécurité des systèmes d'information.
-            </p>
+            <div class="skills__content">
+              <p class="skills__description">
+                Concevoir des architectures de cybersécurité robustes et mettre en place des mécanismes de protection pour assurer la sécurité des systèmes d'information.
+              </p>
+            </div>
           </div>
+          
         </div>
       </section>
 
@@ -469,7 +495,7 @@
       
         <div class="work__container container grid">
           <div class="work__card" data-id="1">
-            <img src="assets/img/project-img-1.jpg" alt="" class="work__img">
+            <img src="assets/img/project-img-1.jpg" alt="Aperçu du projet Resto" class="work__img">
             <div class="work__details">
               <h3 class="work__title">RESTO</h3>
               <span class="work__description">PHP | MySQL + Architecture MVC</span>
@@ -477,7 +503,7 @@
           </div>
       
           <div class="work__card" data-id="2">
-            <img src="assets/img/project-img-5.jpg" alt="" class="work__img">
+            <img src="assets/img/project-img-5.jpg" alt="Aperçu du projet Séminaire" class="work__img">
             <div class="work__details">
               <h3 class="work__title">Seminaire</h3>
               <span class="work__description">PHP | JSON + Architecture MVC</span>
@@ -485,7 +511,7 @@
           </div>
       
           <div class="work__card" data-id="3">
-            <img src="assets/img/project-img-3.jpg" alt="" class="work__img">
+            <img src="assets/img/project-img-3.jpg" alt="Aperçu du projet Congrès ANALIM" class="work__img">
             <div class="work__details">
               <h3 class="work__title">Congrès ANALIM</h3>
               <span class="work__description">PHP Objet/MYSQL + Architecture MVC</span>
@@ -493,7 +519,7 @@
           </div>
       
           <div class="work__card" data-id="4">
-            <img src="assets/img/project-img-4.jpg" alt="" class="work__img">
+            <img src="assets/img/project-img-4.jpg" alt="Aperçu du projet Jardinier" class="work__img">
             <div class="work__details">
               <h3 class="work__title">Jardinier</h3>
               <span class="work__description">PHP | SYMFONY - Framework</span>
@@ -501,7 +527,7 @@
           </div>
       
           <div class="work__card" data-id="5">
-            <img src="assets/img/project-img-2.jpg" alt="" class="work__img">
+            <img src="assets/img/project-img-2.jpg" alt="Aperçu du projet Bibliothèque numérique" class="work__img">
             <div class="work__details">
               <h3 class="work__title">Bibliothèque numérique</h3>
               <span class="work__description">Flutter | developpement mobile</span>
@@ -509,7 +535,7 @@
           </div>
 
           <div class="work__card" data-id="6">
-            <img src="assets/img/project-img-6.jpg" alt="" class="work__img">
+            <img src="assets/img/project-img-6.jpg" alt="Aperçu du site de la mairie de Glandon" class="work__img">
             <div class="work__details">
               <h3 class="work__title">Site de la mairie de Glandon</h3>
               <span class="work__description">Mise en place du site avec le CMS WordPress</span>
@@ -517,7 +543,7 @@
           </div>
 
           <div class="work__card" data-id="7">
-            <img src="assets/img/project-img-6.jpg" alt="" class="work__img">
+            <img src="assets/img/project-img-6.jpg" alt="Aperçu du stage chez HôtenB." class="work__img">
             <div class="work__details">
               <h3 class="work__title">Stage chez HôtenB.</h3>
               <span class="work__description">Développement d'une application web</span>

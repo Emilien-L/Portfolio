@@ -1,4 +1,34 @@
 document.addEventListener('DOMContentLoaded', () => {
+
+
+  // ======================================================
+  // NOUVEAU CODE : MENU MOBILE ACCESSIBLE
+  // ======================================================
+  const navToggleBtn = document.getElementById('nav-toggle-btn');
+  const navMenu = document.getElementById('nav-menu');
+
+  if (navToggleBtn && navMenu) {
+    navToggleBtn.addEventListener('click', () => {
+      // Ouvre/ferme le menu
+      navMenu.classList.toggle('nav-open');
+
+      // Change l'icône (Bars <-> X)
+      const icon = navToggleBtn.querySelector('i');
+      icon.classList.toggle('fa-bars');
+      icon.classList.toggle('fa-times');
+
+      // Met à jour les attributs ARIA
+      const isExpanded = navMenu.classList.contains('nav-open');
+      navToggleBtn.setAttribute('aria-expanded', isExpanded);
+      navToggleBtn.setAttribute('aria-label', isExpanded ? 'Fermer le menu' : 'Ouvrir le menu');
+    });
+  }
+  // ======================================================
+  // FIN DU NOUVEAU CODE : MENU MOBILE
+  // ======================================================
+
+
+  
   const modal = document.getElementById('projectModal');
 
   const cards = document.querySelectorAll('.work__card');
@@ -215,6 +245,25 @@ document.addEventListener('DOMContentLoaded', () => {
         modal.style.display = 'none';
       }, 400);
     }
+  });
+
+  const skillHeaders = document.querySelectorAll('.skills__header');
+
+  skillHeaders.forEach(header => {
+    header.addEventListener('click', () => {
+      const item = header.closest('.skills__item');
+      
+      // 1. Bascule (toggle) l'item cliqué
+      item.classList.toggle('skills-open');
+
+      // 2. (Optionnel) Ferme les autres items
+      skillHeaders.forEach(otherHeader => {
+        const otherItem = otherHeader.closest('.skills__item');
+        if (otherItem !== item && otherItem.classList.contains('skills-open')) {
+          otherItem.classList.remove('skills-open');
+        }
+      });
+    });
   });
 
 
