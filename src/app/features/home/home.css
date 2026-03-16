@@ -150,4 +150,9 @@
 @media (max-width: 900px) {
   .hero-inner { grid-template-columns: 1fr; }
   .hero-card { display: none; }
+  .hero { padding: 6rem 1.5rem 3rem; overflow: hidden; }
+  .hero-name { font-size: clamp(2rem, 9vw, 3.5rem); }
+  .hero-name em { font-size: clamp(2rem, 9vw, 3.5rem); }
+  .hero-role { font-size: 1rem; }
+  .hero-btns { flex-direction: row; flex-wrap: wrap; gap: 0.75rem; }
 }
