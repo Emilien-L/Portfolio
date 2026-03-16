@@ -1,0 +1,20 @@
+<section id="skills">
+  <div class="container">
+    <div class="section-label">Compétences</div>
+    <h2 class="section-title">Ce que je sais<br/>faire</h2>
+
+    <div class="skills-list">
+      @for (skill of data.skills; track skill.name; let i = $index) {
+        <div class="skill-item">
+          <div class="skill-header" (click)="toggle(i)">
+            <span class="skill-name">{{ skill.name }}</span>
+            <span class="skill-toggle">{{ openIndex === i ? '[ − ]' : '[ + ]' }}</span>
+          </div>
+          <div class="skill-body" [class.open]="openIndex === i">
+            {{ skill.desc }}
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

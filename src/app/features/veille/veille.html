@@ -1,0 +1,17 @@
+<section id="veille">
+  <div class="container">
+    <div class="section-label">Veille technologique</div>
+    <h2 class="section-title">Comment je reste<br/>à la page</h2>
+
+    <div class="veille-grid">
+      @for (item of data.veille; track item.num) {
+        <div class="veille-card">
+          <div class="veille-num">{{ item.num }}</div>
+          <div class="veille-icon">{{ item.icon }}</div>
+          <div class="veille-title">{{ item.title }}</div>
+          <div class="veille-desc">{{ item.desc }}</div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

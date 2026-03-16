@@ -1,0 +1,20 @@
+<nav [class.scrolled]="isScrolled">
+  <div class="nav-inner">
+    <a href="#home" class="nav-logo">Emilien<span>.</span></a>
+
+    <ul class="nav-links" [class.open]="isMenuOpen">
+      <li><a href="#about" (click)="closeMenu()">À propos</a></li>
+      <li><a href="#parcours" (click)="closeMenu()">Parcours</a></li>
+      <li><a href="#veille" (click)="closeMenu()">Veille</a></li>
+      <li><a href="#skills" (click)="closeMenu()">Compétences</a></li>
+      <li><a href="#works" (click)="closeMenu()">Projets</a></li>
+      <li><a href="#contact" (click)="closeMenu()">Contact</a></li>
+    </ul>
+
+    <a href="#contact" class="btn btn-primary nav-cta">Me contacter</a>
+
+    <button class="nav-burger" (click)="toggleMenu()" [attr.aria-expanded]="isMenuOpen">
+      <i [class]="isMenuOpen ? 'fas fa-times' : 'fas fa-bars'"></i>
+    </button>
+  </div>
+</nav>

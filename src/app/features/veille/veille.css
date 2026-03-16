@@ -1,0 +1,73 @@
+section {
+  padding: 5rem 0;
+}
+
+.veille-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.veille-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.75rem;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.veille-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  transform: scaleX(0);
+  transition: transform 0.3s;
+  transform-origin: left;
+}
+
+.veille-card:hover {
+  border-color: var(--border-hover);
+  background: rgba(124,111,247,0.04);
+}
+
+.veille-card:hover::before { transform: scaleX(1); }
+
+.veille-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.veille-icon {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  opacity: 0.7;
+}
+
+.veille-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+  color: var(--text);
+}
+
+.veille-desc {
+  font-size: 0.84rem;
+  color: var(--muted);
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+@media (max-width: 900px) {
+  .veille-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 600px) {
+  .veille-grid { grid-template-columns: 1fr; }
+}

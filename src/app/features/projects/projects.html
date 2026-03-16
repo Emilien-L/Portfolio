@@ -1,0 +1,61 @@
+<section id="works">
+  <div class="container">
+    <div class="section-label">Portfolio</div>
+    <h2 class="section-title">Mes projets</h2>
+
+    <div class="projects-grid">
+      @for (project of data.projects; track project.id) {
+        <div class="project-card" (click)="openModal(project)">
+          <div class="project-arrow"><i class="fas fa-arrow-up-right"></i></div>
+          <img [src]="project.img" [alt]="project.title" class="project-img"/>
+          <div class="project-body">
+            <div class="project-stack">{{ project.stack }}</div>
+            <div class="project-title">{{ project.title }}</div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- Modal -->
+@if (selectedProject) {
+  <div class="modal-overlay" (click)="closeModal()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+      <button class="modal-close" (click)="closeModal()">
+        <i class="fas fa-times"></i>
+      </button>
+
+      <h2 class="modal-title">{{ selectedProject.title }}</h2>
+      <p class="modal-desc">{{ selectedProject.description }}</p>
+
+      <div class="modal-grid">
+        <div>
+          <h3 class="modal-subtitle">Technologies</h3>
+          <ul class="modal-list">
+            @for (tech of selectedProject.technologies; track tech) {
+              <li>{{ tech }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h3 class="modal-subtitle">Compétences mobilisées</h3>
+          <ul class="modal-list">
+            @for (skill of selectedProject.skills; track skill) {
+              <li>{{ skill }}</li>
+            }
+          </ul>
+        </div>
+      </div>
+
+      @if (selectedProject.doc) {
+        <a
+        [href]="selectedProject.doc"
+          target="_blank"
+          class="btn btn-primary modal-btn">
+        <i class="fas fa-file-pdf"></i> Voir la documentation
+        </a>
+      }
+    </div>
+  </div>
+}
